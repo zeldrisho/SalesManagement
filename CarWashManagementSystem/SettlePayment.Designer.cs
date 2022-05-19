@@ -31,6 +31,7 @@ namespace CarWashManagementSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettlePayment));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSale = new System.Windows.Forms.TextBox();
             this.txtCash = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@ namespace CarWashManagementSystem
             this.btn1 = new System.Windows.Forms.Button();
             this.btnPoint = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,17 @@ namespace CarWashManagementSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(283, 35);
             this.panel1.TabIndex = 1;
+            // 
+            // picClose
+            // 
+            this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
+            this.picClose.Location = new System.Drawing.Point(252, 2);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(29, 32);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picClose.TabIndex = 3;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // label1
             // 
@@ -314,17 +325,6 @@ namespace CarWashManagementSystem
             this.btn0.UseVisualStyleBackColor = false;
             this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
-            // picClose
-            // 
-            this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
-            this.picClose.Location = new System.Drawing.Point(252, 2);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(29, 32);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picClose.TabIndex = 3;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
             // SettlePayment
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -350,6 +350,8 @@ namespace CarWashManagementSystem
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
+            this.MaximumSize = new System.Drawing.Size(283, 456);
+            this.MinimumSize = new System.Drawing.Size(283, 456);
             this.Name = "SettlePayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SettlePayment";

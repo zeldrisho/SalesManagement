@@ -82,5 +82,10 @@ namespace CarWashManagementSystem
             else
                 txtPassword.UseSystemPasswordChar = true;
         }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.ExitThread();
+        }
     }
 }

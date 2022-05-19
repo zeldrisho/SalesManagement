@@ -30,9 +30,9 @@ namespace CarWashManagementSystem
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cash));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddService = new System.Windows.Forms.Button();
             this.btnAddCustomer = new System.Windows.Forms.Button();
@@ -136,6 +136,7 @@ namespace CarWashManagementSystem
             // 
             // lblTotal
             // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(741, 22);
@@ -146,10 +147,11 @@ namespace CarWashManagementSystem
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(205)))), ((int)(((byte)(239)))));
-            this.label3.Location = new System.Drawing.Point(535, 22);
+            this.label3.Location = new System.Drawing.Point(539, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 18);
             this.label3.TabIndex = 8;
@@ -177,6 +179,7 @@ namespace CarWashManagementSystem
             // 
             // btnCash
             // 
+            this.btnCash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCash.Enabled = false;
             this.btnCash.FlatAppearance.BorderSize = 0;
             this.btnCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -199,14 +202,14 @@ namespace CarWashManagementSystem
             this.dgvCash.AllowUserToResizeRows = false;
             this.dgvCash.BackgroundColor = System.Drawing.Color.White;
             this.dgvCash.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(205)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCash.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(205)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCash.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCash.ColumnHeadersHeight = 35;
             this.dgvCash.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCash.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -244,7 +247,7 @@ namespace CarWashManagementSystem
             this.Column2.HeaderText = "Id";
             this.Column2.Name = "Column2";
             this.Column2.Visible = false;
-            this.Column2.Width = 47;
+            this.Column2.Width = 49;
             // 
             // Column11
             // 
@@ -266,7 +269,7 @@ namespace CarWashManagementSystem
             this.Column5.HeaderText = "Car No.";
             this.Column5.Name = "Column5";
             this.Column5.Visible = false;
-            this.Column5.Width = 88;
+            this.Column5.Width = 90;
             // 
             // Column10
             // 
@@ -292,16 +295,16 @@ namespace CarWashManagementSystem
             // Column8
             // 
             this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column8.HeaderText = "Services";
             this.Column8.Name = "Column8";
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column4.HeaderText = "Price";
             this.Column4.Name = "Column4";
             this.Column4.Width = 69;
@@ -312,7 +315,7 @@ namespace CarWashManagementSystem
             this.Column9.HeaderText = "Date";
             this.Column9.Name = "Column9";
             this.Column9.Visible = false;
-            this.Column9.Width = 68;
+            this.Column9.Width = 70;
             // 
             // Delete
             // 

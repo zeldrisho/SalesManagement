@@ -42,7 +42,7 @@ namespace CarWashManagementSystem
             this.btnEmployer = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCompany = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -86,7 +86,7 @@ namespace CarWashManagementSystem
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 681);
+            this.panel1.Size = new System.Drawing.Size(10, 511);
             this.panel1.TabIndex = 0;
             // 
             // panelSlide
@@ -111,7 +111,7 @@ namespace CarWashManagementSystem
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(10, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(190, 681);
+            this.panel2.Size = new System.Drawing.Size(190, 511);
             this.panel2.TabIndex = 1;
             // 
             // btnLogout
@@ -121,7 +121,7 @@ namespace CarWashManagementSystem
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 636);
+            this.btnLogout.Location = new System.Drawing.Point(0, 466);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(190, 45);
             this.btnLogout.TabIndex = 10;
@@ -245,29 +245,30 @@ namespace CarWashManagementSystem
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.lblCompany);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
+            this.panel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel4.Size = new System.Drawing.Size(190, 147);
             this.panel4.TabIndex = 0;
             // 
-            // label1
+            // lblCompany
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(205)))), ((int)(((byte)(239)))));
-            this.label1.Location = new System.Drawing.Point(72, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Mdemy";
+            this.lblCompany.AutoSize = true;
+            this.lblCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(205)))), ((int)(((byte)(239)))));
+            this.lblCompany.Location = new System.Drawing.Point(56, 58);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(133, 30);
+            this.lblCompany.TabIndex = 3;
+            this.lblCompany.Text = "Zeldris Ltd";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 0;
@@ -282,18 +283,19 @@ namespace CarWashManagementSystem
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1064, 311);
+            this.panel3.Size = new System.Drawing.Size(954, 147);
             this.panel3.TabIndex = 3;
             // 
             // panel7
             // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.BackColor = System.Drawing.SystemColors.Control;
             this.panel7.Controls.Add(this.lblCostofGood);
             this.panel7.Controls.Add(this.label9);
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.pictureBox6);
             this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Location = new System.Drawing.Point(409, 108);
+            this.panel7.Location = new System.Drawing.Point(354, 21);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(251, 105);
             this.panel7.TabIndex = 3;
@@ -352,13 +354,14 @@ namespace CarWashManagementSystem
             // 
             // panel6
             // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.Controls.Add(this.lblGrossProfit);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.picGrossProfit);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(767, 108);
+            this.panel6.Location = new System.Drawing.Point(657, 21);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(251, 105);
             this.panel6.TabIndex = 2;
@@ -417,13 +420,14 @@ namespace CarWashManagementSystem
             // 
             // panel5
             // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
             this.panel5.Controls.Add(this.lblRevenus);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.picRevenus);
             this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Location = new System.Drawing.Point(51, 108);
+            this.panel5.Location = new System.Drawing.Point(51, 21);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(251, 105);
             this.panel5.TabIndex = 1;
@@ -482,24 +486,27 @@ namespace CarWashManagementSystem
             // 
             // panelChild
             // 
-            this.panelChild.Location = new System.Drawing.Point(253, 265);
+            this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChild.Location = new System.Drawing.Point(200, 147);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(967, 485);
+            this.panelChild.Size = new System.Drawing.Size(954, 364);
             this.panelChild.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1154, 511);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1170, 550);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Wash Management System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -534,7 +541,7 @@ namespace CarWashManagementSystem
         private System.Windows.Forms.Button btnService;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnEmployer;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCompany;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelSlide;
         private System.Windows.Forms.Button btnLogout;

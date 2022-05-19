@@ -201,6 +201,7 @@ namespace CarWashManagementSystem
             // 
             // btnAddVT
             // 
+            this.btnAddVT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddVT.FlatAppearance.BorderSize = 0;
             this.btnAddVT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddVT.Image = ((System.Drawing.Image)(resources.GetObject("btnAddVT.Image")));
@@ -234,10 +235,10 @@ namespace CarWashManagementSystem
             // 
             this.tabPage2.Controls.Add(this.dgvCostofGoodSold);
             this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(959, 425);
+            this.tabPage2.Size = new System.Drawing.Size(959, 432);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cost of Good Sold";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -273,7 +274,7 @@ namespace CarWashManagementSystem
             this.dgvCostofGoodSold.Location = new System.Drawing.Point(3, 3);
             this.dgvCostofGoodSold.Name = "dgvCostofGoodSold";
             this.dgvCostofGoodSold.RowHeadersVisible = false;
-            this.dgvCostofGoodSold.Size = new System.Drawing.Size(953, 345);
+            this.dgvCostofGoodSold.Size = new System.Drawing.Size(953, 352);
             this.dgvCostofGoodSold.TabIndex = 6;
             this.dgvCostofGoodSold.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCostofGoodSold_CellContentClick);
             // 
@@ -336,13 +337,14 @@ namespace CarWashManagementSystem
             this.panel3.Controls.Add(this.txtSearchCoG);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(3, 348);
+            this.panel3.Location = new System.Drawing.Point(3, 355);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(953, 74);
             this.panel3.TabIndex = 5;
             // 
             // btnAddCoG
             // 
+            this.btnAddCoG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddCoG.FlatAppearance.BorderSize = 0;
             this.btnAddCoG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCoG.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCoG.Image")));
@@ -380,9 +382,9 @@ namespace CarWashManagementSystem
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.txtComName);
             this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(959, 432);
+            this.tabPage3.Size = new System.Drawing.Size(959, 425);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Company Detail";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -394,7 +396,7 @@ namespace CarWashManagementSystem
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(725, 259);
+            this.btnCancel.Location = new System.Drawing.Point(725, 245);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(140, 41);
             this.btnCancel.TabIndex = 26;
@@ -409,7 +411,7 @@ namespace CarWashManagementSystem
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(547, 259);
+            this.btnSave.Location = new System.Drawing.Point(547, 245);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(140, 41);
             this.btnSave.TabIndex = 27;
@@ -419,15 +421,17 @@ namespace CarWashManagementSystem
             // 
             // txtComAddress
             // 
-            this.txtComAddress.Location = new System.Drawing.Point(239, 192);
+            this.txtComAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtComAddress.Location = new System.Drawing.Point(239, 188);
             this.txtComAddress.Name = "txtComAddress";
             this.txtComAddress.Size = new System.Drawing.Size(626, 26);
             this.txtComAddress.TabIndex = 1;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 195);
+            this.label4.Location = new System.Drawing.Point(79, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 20);
             this.label4.TabIndex = 0;
@@ -435,15 +439,17 @@ namespace CarWashManagementSystem
             // 
             // txtComName
             // 
-            this.txtComName.Location = new System.Drawing.Point(239, 146);
+            this.txtComName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtComName.Location = new System.Drawing.Point(239, 142);
             this.txtComName.Name = "txtComName";
             this.txtComName.Size = new System.Drawing.Size(626, 26);
             this.txtComName.TabIndex = 1;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 149);
+            this.label3.Location = new System.Drawing.Point(79, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 20);
             this.label3.TabIndex = 0;

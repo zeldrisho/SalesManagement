@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,16 @@ namespace CarWashManagementSystem
 {
     public partial class MainForm : Form
     {
+        SqlCommand cm = new SqlCommand();
+        dbConnect dbcon = new dbConnect();
+        SqlDataReader dr;
+
         public MainForm()
         {
             InitializeComponent();
+            loadCompany();
             loadGrossProfit();
-            openChildForm(new Dashboard()); 
-
+            openChildForm(new Dashboard());
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -132,5 +137,23 @@ namespace CarWashManagementSystem
         }
         #endregion method
 
+        public void loadCompany()
+        {
+            cm = new SqlCommand("SELECT * FROM tbCompany", dbcon.connect());
+            dbcon.open();
+            dr = cm.ExecuteReader();
+            dr.Read();
+            if (dr.HasRows)
+            {
+                lblCompany.Text = dr["name"].ToString();
+            }
+            dr.Close();
+            dbcon.close();
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.ExitThread();
+        }
     }
 }
