@@ -12,7 +12,7 @@ namespace CarWashManagementSystem
     class dbConnect
     {
         SqlCommand cm = new SqlCommand();
-        private SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=G:\workspace\projects\CarWashManagementSystem\CarWashManagementSystem\DBCarWash.mdf;Integrated Security=True; Connect Timeout=30");
+        private SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\workspace\projects\CarWashManagementSystem\CarWashManagementSystem\DBCarWash.mdf;Integrated Security=True; Connect Timeout=30");
         public SqlConnection connect()
         {
             return cn;

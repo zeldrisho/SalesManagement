@@ -86,7 +86,7 @@ namespace CarWashManagementSystem
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 511);
+            this.panel1.Size = new System.Drawing.Size(10, 627);
             this.panel1.TabIndex = 0;
             // 
             // panelSlide
@@ -111,7 +111,7 @@ namespace CarWashManagementSystem
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(10, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(190, 511);
+            this.panel2.Size = new System.Drawing.Size(190, 627);
             this.panel2.TabIndex = 1;
             // 
             // btnLogout
@@ -121,7 +121,7 @@ namespace CarWashManagementSystem
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 466);
+            this.btnLogout.Location = new System.Drawing.Point(0, 582);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(190, 45);
             this.btnLogout.TabIndex = 10;
@@ -283,7 +283,7 @@ namespace CarWashManagementSystem
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(954, 147);
+            this.panel3.Size = new System.Drawing.Size(968, 147);
             this.panel3.TabIndex = 3;
             // 
             // panel7
@@ -295,7 +295,7 @@ namespace CarWashManagementSystem
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.pictureBox6);
             this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Location = new System.Drawing.Point(354, 21);
+            this.panel7.Location = new System.Drawing.Point(361, 21);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(251, 105);
             this.panel7.TabIndex = 3;
@@ -361,7 +361,7 @@ namespace CarWashManagementSystem
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.picGrossProfit);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(657, 21);
+            this.panel6.Location = new System.Drawing.Point(671, 21);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(251, 105);
             this.panel6.TabIndex = 2;
@@ -489,20 +489,20 @@ namespace CarWashManagementSystem
             this.panelChild.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChild.Location = new System.Drawing.Point(200, 147);
             this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(954, 364);
+            this.panelChild.Size = new System.Drawing.Size(968, 480);
             this.panelChild.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1154, 511);
+            this.ClientSize = new System.Drawing.Size(1168, 627);
             this.Controls.Add(this.panelChild);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1170, 550);
+            this.MinimumSize = new System.Drawing.Size(1184, 666);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Wash Management System";
