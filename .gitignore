@@ -1,6 +1,3 @@
-!DBCarWash.mdf
-!DBCarWash_log.ldf
-!SqlServerTypes/
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudio,csharp,dotnetcore,executable,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,csharp,dotnetcore,executable,windows
