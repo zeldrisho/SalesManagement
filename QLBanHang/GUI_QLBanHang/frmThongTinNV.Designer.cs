@@ -51,7 +51,7 @@ namespace GUI_QLBanHang
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(287, 65);
             this.lblEmail.TabIndex = 3;
-            this.lblEmail.Text = "AS";
+            this.lblEmail.Text = "Email";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -163,7 +163,7 @@ namespace GUI_QLBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(303, 257);
             this.Controls.Add(this.lblTinhTrang);
             this.Controls.Add(this.label9);

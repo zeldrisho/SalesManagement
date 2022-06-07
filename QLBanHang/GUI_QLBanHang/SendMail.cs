@@ -37,8 +37,8 @@ namespace GUI_QLBanHang
             // login email để gửi tin 
             // tự thay tài khoản email và password của tài khoản gmail mún gửi tin 
             // nhớ cho phép login ứng dụng kém an toàn nhá
-            string loginEmail = "sof205.ps16903@gmail.com";
-            string loginPassword = "thanhnps16903";
+            string loginEmail = "2024801030101@student.tdmu.edu.vn";
+            string loginPassword = "Trung@tftmobile";
             BUS_Mail mail = new BUS_Mail(loginEmail, loginPassword); // tạo đối tượng để gửi mail truyền tk,pass để login
             result = mail.sendMail(email, password,isUpdate) ; // nếu là cập nhật mật khẩu thì true, còn nếu là mật khẩu thì false;
             pictureBox1.Invoke(new Action(() => Close()));

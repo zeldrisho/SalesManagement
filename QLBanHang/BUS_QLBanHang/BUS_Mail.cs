@@ -28,13 +28,13 @@ namespace BUS_QLBanHang
                 message.To.Add(email);
                 if (isUpdate)
                 {
-                    message.Body = "Chào anh/chị. Mật khẩu mới truy cập vào phần mềm là: " + password;
+                    message.Body = "Chào anh/chị, mật khẩu mới truy cập vào phần mềm của anh/chị là: " + password;
                     message.Subject = "Bạn đã yêu cầu cấp lại mật khẩu!";
                 }
                 else
                 {
-                    message.Body = string.Format("Chào mừng! anh/chị đã được thêm vào nhân viên của phần mềm với " +
-                                                 "thông tin đăng nhập: \n Email: {0} \n Mật khẩu: {1} ", email, password);
+                    message.Body = string.Format("Chào mừng anh/chị đã được thêm vào nhân viên của phần mềm với " +
+                                                 "thông tin đăng nhập là: \n- Email: {0} \n- Mật khẩu: {1} ", email, password);
                     message.Subject = "Thông tin đăng nhập phần mềm!";
 
                 }
@@ -52,7 +52,7 @@ namespace BUS_QLBanHang
                     client.Send(message);
                 }
 
-                return "Vui lòng kiểm tra Email để nhận lấy mật khẩu mới!";
+                return "Vui lòng kiểm tra Email để nhận mật khẩu mới!";
 
             }
             catch (Exception e)
