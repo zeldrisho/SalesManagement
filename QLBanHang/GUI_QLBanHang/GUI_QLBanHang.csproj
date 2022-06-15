@@ -201,9 +201,6 @@
     <None Include="Resources\login_64px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fpt.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\them.png" />
   </ItemGroup>
   <ItemGroup>
@@ -240,7 +237,6 @@
     <Content Include="product.ico" />
     <Content Include="Resources\huongdan.png" />
     <None Include="Resources\logout.png" />
-    <None Include="Resources\package_128px.png" />
     <Content Include="Resources\pic.png" />
   </ItemGroup>
   <ItemGroup>
