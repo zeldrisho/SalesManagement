@@ -43,31 +43,32 @@ namespace GUI_QLBanHang
             this.btnCustomer = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnEmployee = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lbl1 = new System.Windows.Forms.Label();
+            this.pcbIcon = new System.Windows.Forms.PictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.panelControl = new System.Windows.Forms.Panel();
             this.menuHuongDan = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.itemHuongDan = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.itemGioiThieu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTaiKhoan = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.itemThongTinNV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.itemDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2DragControl4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.pcbIcon = new System.Windows.Forms.PictureBox();
-            this.panelControl = new System.Windows.Forms.Panel();
-            this.itemHuongDan = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemGioiThieu = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemThongTinNV = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.pnMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).BeginInit();
             this.menuHuongDan.SuspendLayout();
             this.menuTaiKhoan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
             // 
+            this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
             // 
             // pnMenu
@@ -138,6 +139,7 @@ namespace GUI_QLBanHang
             // 
             this.btnLogin.Animated = true;
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BorderRadius = 8;
             this.btnLogin.CheckedState.FillColor = System.Drawing.Color.Red;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.CustomImages.Image = global::GUI_QLBanHang.Properties.Resources.login_64px;
@@ -282,6 +284,16 @@ namespace GUI_QLBanHang
             this.lbl1.TabIndex = 2;
             this.lbl1.Text = "Quản Lý Bán Hàng";
             // 
+            // pcbIcon
+            // 
+            this.pcbIcon.Image = global::GUI_QLBanHang.Properties.Resources.product_500px;
+            this.pcbIcon.Location = new System.Drawing.Point(36, 24);
+            this.pcbIcon.Name = "pcbIcon";
+            this.pcbIcon.Size = new System.Drawing.Size(136, 101);
+            this.pcbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbIcon.TabIndex = 2;
+            this.pcbIcon.TabStop = false;
+            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
@@ -300,6 +312,15 @@ namespace GUI_QLBanHang
             this.guna2DragControl3.TargetControl = this.panelControl;
             this.guna2DragControl3.UseTransparentDrag = true;
             // 
+            // panelControl
+            // 
+            this.panelControl.BackgroundImage = global::GUI_QLBanHang.Properties.Resources.store;
+            this.panelControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelControl.Location = new System.Drawing.Point(214, 33);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(913, 619);
+            this.panelControl.TabIndex = 2;
+            // 
             // menuHuongDan
             // 
             this.menuHuongDan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
@@ -312,10 +333,29 @@ namespace GUI_QLBanHang
             this.menuHuongDan.Name = "contextMenuStrip1";
             this.menuHuongDan.Size = new System.Drawing.Size(247, 70);
             // 
+            // itemHuongDan
+            // 
+            this.itemHuongDan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.itemHuongDan.ForeColor = System.Drawing.Color.LightCoral;
+            this.itemHuongDan.Image = global::GUI_QLBanHang.Properties.Resources.huongdan;
+            this.itemHuongDan.Name = "itemHuongDan";
+            this.itemHuongDan.Size = new System.Drawing.Size(246, 30);
+            this.itemHuongDan.Text = "Hướng dẫn sử dụng";
+            this.itemHuongDan.Click += new System.EventHandler(this.itemHuongDan_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(243, 6);
+            // 
+            // itemGioiThieu
+            // 
+            this.itemGioiThieu.ForeColor = System.Drawing.Color.LightCoral;
+            this.itemGioiThieu.Image = global::GUI_QLBanHang.Properties.Resources.gioithieu;
+            this.itemGioiThieu.Name = "itemGioiThieu";
+            this.itemGioiThieu.Size = new System.Drawing.Size(246, 30);
+            this.itemGioiThieu.Text = "Giới thiệu phần mềm";
+            this.itemGioiThieu.Click += new System.EventHandler(this.itemGioiThieu_Click);
             // 
             // menuTaiKhoan
             // 
@@ -329,10 +369,29 @@ namespace GUI_QLBanHang
             this.menuTaiKhoan.Name = "contextMenuStrip1";
             this.menuTaiKhoan.Size = new System.Drawing.Size(209, 70);
             // 
+            // itemThongTinNV
+            // 
+            this.itemThongTinNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.itemThongTinNV.ForeColor = System.Drawing.Color.LightCoral;
+            this.itemThongTinNV.Image = global::GUI_QLBanHang.Properties.Resources.hoso;
+            this.itemThongTinNV.Name = "itemThongTinNV";
+            this.itemThongTinNV.Size = new System.Drawing.Size(208, 30);
+            this.itemThongTinNV.Text = "Hồ sơ nhân viên";
+            this.itemThongTinNV.Click += new System.EventHandler(this.itemThongTinNV_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(205, 6);
+            // 
+            // itemDoiMatKhau
+            // 
+            this.itemDoiMatKhau.ForeColor = System.Drawing.Color.LightCoral;
+            this.itemDoiMatKhau.Image = global::GUI_QLBanHang.Properties.Resources.password_reset_64px;
+            this.itemDoiMatKhau.Name = "itemDoiMatKhau";
+            this.itemDoiMatKhau.Size = new System.Drawing.Size(208, 30);
+            this.itemDoiMatKhau.Text = "Đổi mật khẩu";
+            this.itemDoiMatKhau.Click += new System.EventHandler(this.itemDoiMatKhau_Click);
             // 
             // guna2DragControl4
             // 
@@ -346,7 +405,7 @@ namespace GUI_QLBanHang
             this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1091, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1087, 1);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox1.TabIndex = 1;
@@ -358,9 +417,9 @@ namespace GUI_QLBanHang
             this.guna2ControlBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1043, 1);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1036, 1);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox2.TabIndex = 3;
             // 
             // guna2ControlBox3
@@ -370,67 +429,10 @@ namespace GUI_QLBanHang
             this.guna2ControlBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(995, 1);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(985, 1);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox3.TabIndex = 4;
-            // 
-            // pcbIcon
-            // 
-            this.pcbIcon.Image = global::GUI_QLBanHang.Properties.Resources.product_500px;
-            this.pcbIcon.Location = new System.Drawing.Point(36, 24);
-            this.pcbIcon.Name = "pcbIcon";
-            this.pcbIcon.Size = new System.Drawing.Size(136, 101);
-            this.pcbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbIcon.TabIndex = 2;
-            this.pcbIcon.TabStop = false;
-            // 
-            // panelControl
-            // 
-            this.panelControl.BackgroundImage = global::GUI_QLBanHang.Properties.Resources.store;
-            this.panelControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelControl.Location = new System.Drawing.Point(214, 33);
-            this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(913, 619);
-            this.panelControl.TabIndex = 2;
-            // 
-            // itemHuongDan
-            // 
-            this.itemHuongDan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.itemHuongDan.ForeColor = System.Drawing.Color.LightCoral;
-            this.itemHuongDan.Image = global::GUI_QLBanHang.Properties.Resources.huongdan;
-            this.itemHuongDan.Name = "itemHuongDan";
-            this.itemHuongDan.Size = new System.Drawing.Size(246, 30);
-            this.itemHuongDan.Text = "Hướng dẫn sử dụng";
-            this.itemHuongDan.Click += new System.EventHandler(this.itemHuongDan_Click);
-            // 
-            // itemGioiThieu
-            // 
-            this.itemGioiThieu.ForeColor = System.Drawing.Color.LightCoral;
-            this.itemGioiThieu.Image = global::GUI_QLBanHang.Properties.Resources.gioithieu;
-            this.itemGioiThieu.Name = "itemGioiThieu";
-            this.itemGioiThieu.Size = new System.Drawing.Size(246, 30);
-            this.itemGioiThieu.Text = "Giới thiệu phần mềm";
-            this.itemGioiThieu.Click += new System.EventHandler(this.itemGioiThieu_Click);
-            // 
-            // itemThongTinNV
-            // 
-            this.itemThongTinNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.itemThongTinNV.ForeColor = System.Drawing.Color.LightCoral;
-            this.itemThongTinNV.Image = global::GUI_QLBanHang.Properties.Resources.hoso;
-            this.itemThongTinNV.Name = "itemThongTinNV";
-            this.itemThongTinNV.Size = new System.Drawing.Size(208, 30);
-            this.itemThongTinNV.Text = "Hồ sơ nhân viên";
-            this.itemThongTinNV.Click += new System.EventHandler(this.itemThongTinNV_Click);
-            // 
-            // itemDoiMatKhau
-            // 
-            this.itemDoiMatKhau.ForeColor = System.Drawing.Color.LightCoral;
-            this.itemDoiMatKhau.Image = global::GUI_QLBanHang.Properties.Resources.password_reset_64px;
-            this.itemDoiMatKhau.Name = "itemDoiMatKhau";
-            this.itemDoiMatKhau.Size = new System.Drawing.Size(208, 30);
-            this.itemDoiMatKhau.Text = "Đổi mật khẩu";
-            this.itemDoiMatKhau.Click += new System.EventHandler(this.itemDoiMatKhau_Click);
             // 
             // frmMain
             // 
@@ -451,9 +453,9 @@ namespace GUI_QLBanHang
             this.Load += new System.EventHandler(this.Main_Load);
             this.pnMenu.ResumeLayout(false);
             this.pnMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).EndInit();
             this.menuHuongDan.ResumeLayout(false);
             this.menuTaiKhoan.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).EndInit();
             this.ResumeLayout(false);
 
         }

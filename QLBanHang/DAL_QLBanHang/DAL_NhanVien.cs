@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DTO_QLBanHang;
 using System.Data.SqlClient;
 using System.Data;
@@ -11,7 +7,6 @@ namespace DAL_QLBanHang
 {
    public class DAL_NhanVien : DBConnect
     {
-        
         public bool DangNhap(string email , string password)
         {
             try

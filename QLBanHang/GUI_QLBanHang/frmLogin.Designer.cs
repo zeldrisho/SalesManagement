@@ -147,7 +147,7 @@ namespace GUI_QLBanHang
             // 
             // btnLogin
             // 
-            this.btnLogin.BorderRadius = 15;
+            this.btnLogin.BorderRadius = 5;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
             this.btnLogin.FillColor2 = System.Drawing.SystemColors.HotTrack;

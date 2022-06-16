@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 namespace GUI_QLBanHang
 {
     public partial class QL_ThongKe : UserControl
@@ -36,13 +28,6 @@ namespace GUI_QLBanHang
             dataGridViewNhapKho.Columns[0].DividerWidth = 2;
             dataGridViewNhapKho.Columns[1].DividerWidth = 2;
             dataGridViewNhapKho.Columns[2].DividerWidth = 2;
-
-
-
-
-
-
-
         }
     }
 }

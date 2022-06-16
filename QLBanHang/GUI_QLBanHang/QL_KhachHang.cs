@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_QLBanHang;
 using DTO_QLBanHang;
@@ -20,18 +14,18 @@ namespace GUI_QLBanHang
         }
         private string email;
         BUS_KhachHang busKH = new BUS_KhachHang();
-        private void setValue(bool param, bool isLoad = false)
+
+        private void setValue(bool param, bool isLoad)
         {
             txtDienThoai.ReadOnly = false;
 
             txtDienThoai.Text = null;
             txtDiaChi.Text = null;
-            btnThem.Enabled = !param;
+            btnThem.Enabled = param;
             txtTenKhach.Text = null;
             rdoNam.Enabled = param;
             rdoNu.Enabled = param;
         
-            btnLuu.Enabled = param;
             if (isLoad)
             {
                 btnSua.Enabled = false;
@@ -42,9 +36,7 @@ namespace GUI_QLBanHang
                 btnSua.Enabled = !param;
                 btnXoa.Enabled = !param;
             }
-            rdoNu.Checked = false;
-            rdoNam.Checked = false;
-      
+            rdoNam.Checked = true;
         }
 
         private void loadGridView()
@@ -58,6 +50,7 @@ namespace GUI_QLBanHang
             dataGridViewKhachHang.Columns[2].DividerWidth = 2;
             dataGridViewKhachHang.Columns[3].DividerWidth = 2;
         }
+
         private void msgBox(string message, bool isError = false)
         {
             if (isError)
@@ -72,27 +65,12 @@ namespace GUI_QLBanHang
         {
             dataGridViewKhachHang.DataSource = busKH.DanhSachKH();
             loadGridView();
-            setValue(false, true);
-
+            setValue(true, false);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            setValue(true);
-        }
-
-        // xuất danh sách khách hàng
-        private void QL_KhachHang_Load(object sender, EventArgs e)
-        {
-            showKhachHang();
-        }
-        private void btnShowAll_Click(object sender, EventArgs e)
-        {
-            showKhachHang();
-        }
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            bool isTrueSDT = int.TryParse(txtDienThoai.Text,out int sdt);
+            bool isTrueSDT = int.TryParse(txtDienThoai.Text, out int sdt);
 
             if (isTrueSDT && txtDienThoai.Text != "" && txtTenKhach.Text != "" && rdoNam.Checked || rdoNu.Checked)
             {
@@ -108,7 +86,16 @@ namespace GUI_QLBanHang
             }
             else
                 msgBox("Vui lòng kiểm tra lại dữ liệu", true);
+        }
 
+        // xuất danh sách khách hàng
+        private void QL_KhachHang_Load(object sender, EventArgs e)
+        {
+            showKhachHang();
+        }
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            showKhachHang();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -129,7 +116,6 @@ namespace GUI_QLBanHang
         {
             if (dataGridViewKhachHang.Rows.Count >0)
             {
-                btnLuu.Enabled = false;
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
                 rdoNam.Enabled = true;
@@ -148,7 +134,7 @@ namespace GUI_QLBanHang
 
         private void btnBoQua_Click(object sender, EventArgs e)
         {
-            setValue(false, true);
+            setValue(true, false);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -189,8 +175,5 @@ namespace GUI_QLBanHang
                 else msgBox("Không tìm thấy khách hàng nào");
             }
         }
-
-
-        // thêm khách hàng
     }
 }

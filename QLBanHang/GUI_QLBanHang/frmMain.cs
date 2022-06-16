@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_QLBanHang;
 namespace GUI_QLBanHang
@@ -53,7 +47,6 @@ namespace GUI_QLBanHang
             panelControl.Controls.Add(fhang);
         }
 
-
         private void btnGuild_Click(object sender, EventArgs e)
         {
             this.menuHuongDan.Show(pnMenu, new Point(206,456));
@@ -74,7 +67,6 @@ namespace GUI_QLBanHang
             menuTaiKhoan.Show(pnMenu, new Point(206, 405));
         }
 
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (btnLogin.Text == "Đăng nhập")
@@ -90,6 +82,15 @@ namespace GUI_QLBanHang
                         resetValue();
                         btnLogin.Text = "Đăng xuất";
                         btnLogin.CustomImages.Image = Properties.Resources.logout;
+                        BUS_NhanVien busNV = new BUS_NhanVien();
+                        if (busNV.LayVaiTro(email))
+                        {
+                            btnEmployee_Click(sender, e);
+                        }
+                        else
+                        {
+                            btnProduct_Click(sender, e);
+                        }
                     }//đăng nhập không thành công thì không làm gì
                 }
             }
@@ -100,7 +101,6 @@ namespace GUI_QLBanHang
                 lblEmail.Text = "Đăng nhập để sử dụng";
                 btnLogin.Text = "Đăng nhập";
                 btnLogin.CustomImages.Image = Properties.Resources.login_64px;
-
             }
         }
 

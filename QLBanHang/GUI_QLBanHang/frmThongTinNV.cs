@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_QLBanHang;
-using DTO_QLBanHang;
 namespace GUI_QLBanHang
 {
     public partial class frmThongTinNV : Form
@@ -18,7 +11,9 @@ namespace GUI_QLBanHang
             InitializeComponent();
             lblEmail.Text =  email;
         }
+
         BUS_NhanVien nhanVien = new BUS_NhanVien();
+
         private void frmThongTinNV_Load(object sender, EventArgs e)
         {
             DataTable table = nhanVien.thongTinNV(lblEmail.Text);
@@ -33,13 +28,6 @@ namespace GUI_QLBanHang
             lblEmail.Text = "HỒ SƠ NHÂN VIÊN CỦA \n" + lblEmail.Text;
             lblVaiTro.Text = (vaiTro == 1) ? "Quản trị" : "Nhân viên";
             lblTinhTrang.Text = (tinhTrang == 1) ? "Đang hoạt động" : "Dừng hoạt động";
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-         
-
 
         }
     }

@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_QLBanHang;
 namespace GUI_QLBanHang
@@ -41,7 +32,6 @@ namespace GUI_QLBanHang
                 BUS_NhanVien nv = new BUS_NhanVien();
                 if (nv.DangNhap(txtEmail.Text , txtPassword.Text))
                 {
-                    MessageBox.Show("Đăng nhập thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     isSuccess = true;
                     Properties.Settings.Default.isSave = chkRememberMe.Checked;
                     if (chkRememberMe.Checked)
@@ -86,8 +76,6 @@ namespace GUI_QLBanHang
                     }
                    else
                         MessageBox.Show("Không thực hiện được", "Thông báo");
-
-
                 }
             }
         }

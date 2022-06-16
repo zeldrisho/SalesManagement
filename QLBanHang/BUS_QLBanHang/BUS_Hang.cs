@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL_QLBanHang;
+﻿using DAL_QLBanHang;
 using DTO_QLBanHang;
 using System.Data;
 namespace BUS_QLBanHang

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_QLBanHang;
 using DTO_QLBanHang;
@@ -21,19 +14,18 @@ namespace GUI_QLBanHang
         }
         //thiết lập
         BUS_NhanVien busNV = new BUS_NhanVien();
-        private void setValue(bool param, bool isLoad = false)
+        private void setValue(bool param, bool isLoad)
         {
             txtEmail.ReadOnly = false;
 
             txtEmail.Text = null;
             txtDiaChi.Text = null;
-            btnThem.Enabled = !param;
+            btnThem.Enabled = param;
             txtTenNhanVien.Text = null;
             rdoHoatDong.Enabled = param;
             rdoNgungHoatDong.Enabled = param;
             rdoNhanVien.Enabled = param;
             rdoQuanTri.Enabled = param;
-            btnLuu.Enabled = param;
             if (isLoad)
             {
                 btnSua.Enabled = false;
@@ -44,10 +36,10 @@ namespace GUI_QLBanHang
                 btnSua.Enabled = !param;
                 btnXoa.Enabled = !param;
             }
-            rdoQuanTri.Checked = false;
-            rdoNhanVien.Checked = false;
-            rdoNgungHoatDong.Checked = false;
-            rdoHoatDong.Checked = false;
+            //rdoQuanTri.Checked = false;
+            rdoNhanVien.Checked = true;
+            //rdoNgungHoatDong.Checked = false;
+            rdoHoatDong.Checked = true;
         }
 
         private bool isValidEmail(string email)
@@ -59,7 +51,6 @@ namespace GUI_QLBanHang
             }
             catch (Exception)
             {
-
                 return false;
             }
         }
@@ -88,7 +79,7 @@ namespace GUI_QLBanHang
         private void QL_NhanVien_Load(object sender, EventArgs e)
         {
             showNhanVien();
-            setValue(false,true);
+            setValue(true, false);
         }
      
         private void btnShowAll_Click(object sender, EventArgs e)
@@ -100,17 +91,9 @@ namespace GUI_QLBanHang
             dataGridViewNhanVien.DataSource = busNV.danhSachNV();
             loadGridView();
         }
-
-
-
+        
         // thêm nhân viên
-    
         private void btnThem_Click(object sender, EventArgs e)
-        {
-            setValue(true);
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
         {
             if (txtDiaChi.Text != "" && txtEmail.Text != "" && txtTenNhanVien.Text != ""
                 && rdoHoatDong.Checked || rdoNgungHoatDong.Checked && rdoNhanVien.Checked || rdoQuanTri.Checked)
@@ -120,16 +103,16 @@ namespace GUI_QLBanHang
                     int vaitro = (rdoQuanTri.Checked) ? 1 : 0;
                     int tinhtrang = (rdoHoatDong.Checked) ? 1 : 0;
                     // gọi đối tượng mail để có thể tạo random mật khẩu và sendmail
- 
+
                     string password = busNV.getPassword();
-                    DTO_NhanVien nhanVien = new DTO_NhanVien(txtEmail.Text , txtTenNhanVien.Text , txtDiaChi.Text,vaitro,tinhtrang,password);
+                    DTO_NhanVien nhanVien = new DTO_NhanVien(txtEmail.Text, txtTenNhanVien.Text, txtDiaChi.Text, vaitro, tinhtrang, password);
                     if (busNV.insertNhanVien(nhanVien))
                     {
                         msgBox("Thêm nhân viên thành công!");
                         setValue(false, true);
                         showNhanVien();
                         // send mail 
-                        SendMail load = new SendMail(nhanVien.EmailNV,password);
+                        SendMail load = new SendMail(nhanVien.EmailNV, password);
                         load.ShowDialog();
                         msgBox(load.getResult);
                     }
@@ -141,12 +124,8 @@ namespace GUI_QLBanHang
             else msgBox("Thiếu trường thông tin!", true);
         }
 
-      
-        //update Nhân viên
-      
         private void dataGridViewNhanVien_Click(object sender, EventArgs e)
         {
-            btnLuu.Enabled = false;
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             rdoNgungHoatDong.Enabled = true;
@@ -201,7 +180,7 @@ namespace GUI_QLBanHang
                 if (busNV.deleteNhanVien(txtEmail.Text))
                 {
                     msgBox("Xóa nhân viên thành công!");
-                    setValue(false, true);
+                    setValue(true, false);
                     showNhanVien();
                 }
                 else
@@ -211,7 +190,7 @@ namespace GUI_QLBanHang
 
         private void btnBoQua_Click(object sender, EventArgs e)
         {
-            setValue(false, true);
+            setValue(true, false);
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using BUS_QLBanHang;
@@ -26,12 +19,14 @@ namespace GUI_QLBanHang
         private string email; // email cần gửi tin
         private string password; // mật khẩu đăng nhập phần mềm
         private bool isUpdate;
+
         private void SendMail_Load(object sender, EventArgs e)
         {
             Thread r = new Thread(send);
             r.IsBackground = true;
             r.Start();
         }
+
         private void send()
         {
             // login email để gửi tin 

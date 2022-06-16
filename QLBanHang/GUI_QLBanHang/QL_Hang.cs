@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QLBanHang;
 using BUS_QLBanHang;
@@ -26,7 +21,7 @@ namespace GUI_QLBanHang
         private string fileSavePath;
         private string checkFileName;
         BUS_Hang busHang = new BUS_Hang();
-        private void setValue(bool param, bool isLoad = false)
+        private void setValue(bool param, bool isLoad)
         {
 
             txtMaHang.Text = null;
@@ -38,8 +33,8 @@ namespace GUI_QLBanHang
             txtDonGiaNhap.Text = null;
             txtHinh.Text = null;
             txtGhiChu.Text = null;
-            btnThem.Enabled = !param;
-            btnLuu.Enabled = param;
+            btnThem.Enabled = param;
+            pcbSanPham.Image = Properties.Resources.pic;
             if (isLoad)
             {
                 btnSua.Enabled = false;
@@ -50,7 +45,6 @@ namespace GUI_QLBanHang
                 btnSua.Enabled = !param;
                 btnXoa.Enabled = !param;
             }
-         
         }
         private void msgBox(string message, bool isError = false)
         {
@@ -81,7 +75,6 @@ namespace GUI_QLBanHang
             dataGridViewHang.Columns[6].HeaderText = "Ghi chú";
             foreach (DataGridViewColumn item in dataGridViewHang.Columns)
                 item.DividerWidth = 2;
-            
         }
         private bool checkIsNummber(string text)
         {
@@ -90,8 +83,8 @@ namespace GUI_QLBanHang
         private void moHinh()
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Bitmap(*.bmp)|*.bmp|JPEG(*.jpg)|*.jpg|PNG(*.png)|*.png|GIF(.gif)|*.gif|All files(*.*)|*.*";
-            open.FilterIndex = 2;
+            open.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            open.FilterIndex = 1;
             open.Title = "Chọn ảnh minh họa cho sản phẩm";
             if (open.ShowDialog() == DialogResult.OK)
             {
@@ -107,31 +100,21 @@ namespace GUI_QLBanHang
         private void showHang()
         {
             dataGridViewHang.DataSource = busHang.DanhSachHang();
-            setValue(false, true);
             loadGridView();
         }
 
         private void QL_Hang_Load(object sender, EventArgs e)
         {
             showHang();
-            setValue(false, true);
-
+            setValue(true, false);
         }
 
         private void btnShowAll_Click(object sender, EventArgs e)
         {
-            
             showHang();
-
         }
 
         private void btnThem_Click(object sender, EventArgs e)
-        {
-            setValue(true, false);
-
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
         {
             // check number 
             if (!checkIsNummber(txtSoLuong.Text) || !checkIsNummber(txtDonGiaBan.Text) || !checkIsNummber(txtDonGiaNhap.Text))
@@ -157,7 +140,7 @@ namespace GUI_QLBanHang
                     showHang();
                     if (File.Exists(fileSavePath))
                         File.Delete(fileSavePath);
-                    
+
                     File.Copy(fileAddress, fileSavePath);
 
                     msgBox("Thêm sản phẩm thành công");
@@ -166,7 +149,7 @@ namespace GUI_QLBanHang
                 {
                     msgBox("Thêm sản phẩm không được", true);
                 }
-               
+
             }
         }
 
@@ -178,14 +161,12 @@ namespace GUI_QLBanHang
         private void pcbSanPham_Click(object sender, EventArgs e)
         {
             moHinh();
-
         }
         
         private void dataGridViewHang_Click(object sender, EventArgs e)
         {
             if (dataGridViewHang.Rows.Count > 0)
             {
-                btnLuu.Enabled = false;
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
                 string Directory = Application.StartupPath;
@@ -279,7 +260,7 @@ namespace GUI_QLBanHang
 
         private void btnBoQua_Click(object sender, EventArgs e)
         {
-            setValue(false, true);
+            setValue(true, false);
         }
     }
 }
