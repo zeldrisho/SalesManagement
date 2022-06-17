@@ -13,13 +13,14 @@
 - Guna.UI2.WinForms 2.0.3.2, DevExpress 21.2
 - Advanced Installer 19.5
 
-## Hướng dẫn cách chạy chương trình
+## Hướng dẫn
 - Mở SSMS -> Chuột phải Databases -> Import Data-tier Application... -> Chọn DBQLBanHang.bacpac
 - Dùng Visual Studio mở QLBanHang.sln
 - Thay đổi connection string trong App.config cho phù hợp
 - Register Guna Framework để edit form
+- Chức năng send mail: sửa tài khoản, mật khẩu ở QLBanHang/GUI_QLBanHang/SendMail.cs
 
-## Tài khoản
+## Tài khoản mặc định
 - Admin 
   + Email: trunghsg2012@gmail.com
   + Password: m@tkh@u

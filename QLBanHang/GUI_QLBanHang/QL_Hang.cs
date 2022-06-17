@@ -2,9 +2,9 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
 using DTO_QLBanHang;
 using BUS_QLBanHang;
-using System.IO;
 
 namespace GUI_QLBanHang
 {
@@ -15,12 +15,15 @@ namespace GUI_QLBanHang
             InitializeComponent();
             this.email = email;
         }
+
         private string email;
         private string fileAddress;
-        private string fileName;
-        private string fileSavePath;
-        private string checkFileName;
+        //private string fileName;
+        //private string fileSavePath;
+        //private string checkFileName;
+        private byte[] img;
         BUS_Hang busHang = new BUS_Hang();
+
         private void setValue(bool param, bool isLoad)
         {
 
@@ -34,7 +37,7 @@ namespace GUI_QLBanHang
             txtHinh.Text = null;
             txtGhiChu.Text = null;
             btnThem.Enabled = param;
-            pcbSanPham.Image = Properties.Resources.pic;
+            pcbSanPham.Image = null;
             if (isLoad)
             {
                 btnSua.Enabled = false;
@@ -53,10 +56,11 @@ namespace GUI_QLBanHang
             else
                 MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
         private Image cloneImage(string path)
         {
             Image result;
-            using (Bitmap original = new Bitmap(path)) 
+            using (Bitmap original = new Bitmap(path))
             {
                 result = (Bitmap)original.Clone();
 
@@ -64,6 +68,14 @@ namespace GUI_QLBanHang
 
             return result;
         }
+
+        private byte[] imageToByteArray(PictureBox pictureBox)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
+            return memoryStream.ToArray();
+        }
+
         private void loadGridView()
         {
             dataGridViewHang.Columns[0].HeaderText = "Mã hàng";
@@ -75,6 +87,11 @@ namespace GUI_QLBanHang
             dataGridViewHang.Columns[6].HeaderText = "Ghi chú";
             foreach (DataGridViewColumn item in dataGridViewHang.Columns)
                 item.DividerWidth = 2;
+
+            DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
+            imgCol = (DataGridViewImageColumn)dataGridViewHang.Columns[5];
+            imgCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
+
         }
         private bool checkIsNummber(string text)
         {
@@ -84,16 +101,19 @@ namespace GUI_QLBanHang
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
-            open.FilterIndex = 1;
-            open.Title = "Chọn ảnh minh họa cho sản phẩm";
+            open.Title = "Chọn ảnh";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 fileAddress = open.FileName;
-                pcbSanPham.Image = cloneImage(fileAddress) ;
-                fileName = Path.GetFileName(fileAddress);
-                string saveDirectory = Application.StartupPath;
-                fileSavePath = saveDirectory + @"\Images\" + fileName ;
-                txtHinh.Text = fileName;
+                pcbSanPham.Image = cloneImage(fileAddress);
+
+                //fileName = Path.GetFileName(fileAddress);
+                //string saveDirectory = Application.StartupPath;
+                //fileSavePath = saveDirectory + @"\Images\" + fileName ;
+                //txtHinh.Text = fileName;
+
+                pcbSanPham.ImageLocation = fileAddress;
+                img = imageToByteArray(pcbSanPham);
             }
         }
         // show 
@@ -116,32 +136,31 @@ namespace GUI_QLBanHang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            // check number 
             if (!checkIsNummber(txtSoLuong.Text) || !checkIsNummber(txtDonGiaBan.Text) || !checkIsNummber(txtDonGiaNhap.Text))
                 msgBox("Vui lòng nhập chữ số!", true);
-            else if (txtTenHang.Text == "" || txtGhiChu.Text == "")
+            else if (txtTenHang.Text == "")
                 msgBox("Thiếu trường thông tin!", true);
-            else if (txtHinh.Text == "")
+            else if (pcbSanPham.Image == null)
                 msgBox("Vui lòng chọn hình!", true);
             else
             {
                 DTO_Hang hang = new DTO_Hang()
                 {
-                    tenHang = txtTenHang.Text,
-                    soLuong = int.Parse(txtSoLuong.Text),
-                    donGiaBan = int.Parse(txtDonGiaBan.Text),
-                    donGiaNhap = int.Parse(txtDonGiaNhap.Text),
-                    ghiChu = txtGhiChu.Text,
-                    hinhAnh = fileName,
-                    email = this.email
+                    TenHang = txtTenHang.Text,
+                    SoLuong = int.Parse(txtSoLuong.Text),
+                    DonGiaBan = int.Parse(txtDonGiaBan.Text),
+                    DonGiaNhap = int.Parse(txtDonGiaNhap.Text),
+                    GhiChu = txtGhiChu.Text,
+                    HinhAnh = imageToByteArray(pcbSanPham),
+                    Email = email
                 };
                 if (busHang.insertHang(hang))
                 {
                     showHang();
-                    if (File.Exists(fileSavePath))
-                        File.Delete(fileSavePath);
+                    //if (File.Exists(fileSavePath))
+                    //    File.Delete(fileSavePath);
 
-                    File.Copy(fileAddress, fileSavePath);
+                    //File.Copy(fileAddress, fileSavePath);
 
                     msgBox("Thêm sản phẩm thành công");
                 }
@@ -149,7 +168,6 @@ namespace GUI_QLBanHang
                 {
                     msgBox("Thêm sản phẩm không được", true);
                 }
-
             }
         }
 
@@ -169,7 +187,7 @@ namespace GUI_QLBanHang
             {
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
-                string Directory = Application.StartupPath;
+                //string Directory = Application.StartupPath;
 
                 txtMaHang.ReadOnly = true;
                 txtMaHang.Text = dataGridViewHang.CurrentRow.Cells[0].Value.ToString();
@@ -177,47 +195,47 @@ namespace GUI_QLBanHang
                 txtSoLuong.Text = dataGridViewHang.CurrentRow.Cells[2].Value.ToString();
                 txtDonGiaNhap.Text = dataGridViewHang.CurrentRow.Cells[3].Value.ToString();
                 txtDonGiaBan.Text = dataGridViewHang.CurrentRow.Cells[4].Value.ToString();
-                checkFileName = dataGridViewHang.CurrentRow.Cells[5].Value.ToString();
-                txtHinh.Text = checkFileName;
-                pcbSanPham.Image = cloneImage(Directory + @"\Images\" + checkFileName);
+                //txtHinh.Text = checkFileName;
+                //pcbSanPham.Image = cloneImage(Directory + @"\Images\" + checkFileName);
+
+                MemoryStream memoryStream = new MemoryStream((byte[])dataGridViewHang.CurrentRow.Cells[5].Value);
+                pcbSanPham.Image = Image.FromStream(memoryStream);
+
                 txtGhiChu.Text = dataGridViewHang.CurrentRow.Cells[6].Value.ToString();
             }
-
         }
-        // sửa
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            // check number 
             if (MessageBox.Show("Bạn có chắc muốn sửa?","Xác nhận",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (!checkIsNummber(txtSoLuong.Text) || !checkIsNummber(txtDonGiaBan.Text) || !checkIsNummber(txtDonGiaNhap.Text))
                     msgBox("Vui lòng nhập chữ số!", true);
-                else if (txtTenHang.Text == "" || txtGhiChu.Text == "")
+                else if (txtTenHang.Text == "")
                     msgBox("Thiếu trường thông tin!", true);
-                else if (txtHinh.Text == "")
+                else if (pcbSanPham.Image == null)
                     msgBox("Vui lòng chọn hình!", true);
                 else
                 {
                     DTO_Hang hang = new DTO_Hang()
                     {
-                        tenHang = txtTenHang.Text,
-                        soLuong = int.Parse(txtSoLuong.Text),
-                        donGiaBan = int.Parse(txtDonGiaBan.Text),
-                        donGiaNhap = int.Parse(txtDonGiaNhap.Text),
-                        ghiChu = txtGhiChu.Text,
-                        hinhAnh = txtHinh.Text,
-                        maHang = int.Parse(txtMaHang.Text)
+                        TenHang = txtTenHang.Text,
+                        SoLuong = int.Parse(txtSoLuong.Text),
+                        DonGiaBan = int.Parse(txtDonGiaBan.Text),
+                        DonGiaNhap = int.Parse(txtDonGiaNhap.Text),
+                        GhiChu = txtGhiChu.Text,
+                        HinhAnh = imageToByteArray(pcbSanPham),
+                        MaHang = int.Parse(txtMaHang.Text)
                     };
                     if (busHang.updateHang(hang))
                     {
                         showHang();
-                        if (hang.hinhAnh != checkFileName)
-                        {
-                            if (File.Exists(fileSavePath))
-                                File.Delete(fileSavePath);
-                            File.Copy(fileAddress, fileSavePath);
-                        }
+                        //if (hang.HinhAnh != checkFileName)
+                        //{
+                        //    if (File.Exists(fileSavePath))
+                        //        File.Delete(fileSavePath);
+                        //    File.Copy(fileAddress, fileSavePath);
+                        //}
                         msgBox("Sửa sản phẩm thành công!");
                     }
                     else

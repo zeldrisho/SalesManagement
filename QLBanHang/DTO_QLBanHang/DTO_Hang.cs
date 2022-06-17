@@ -2,125 +2,49 @@
 {
     public class DTO_Hang
     {
-        private int MaHang;
-        private string TenHang;
-        private int SoLuong;
-        private float DonGiaNhap;
-        private float DonGiaBan;
-        private string HinhAnh;
-        private string GhiChu;
-        private string Email;
+        private int maHang;
+        private string tenHang;
+        private int soLuong;
+        private float donGiaNhap;
+        private float donGiaBan;
+        private byte[] hinhAnh;
+        private string ghiChu;
+        private string email;
 
-        public int maHang
+        public DTO_Hang()
         {
-            get
-            {
-                return MaHang;
-            }
-            set
-            {
-                MaHang = value;
-            }
-        }
-        public string tenHang
-        {
-            get
-            {
-                return TenHang;
-            }
-            set
-            {
-                TenHang = value;
-            }
-        }
-        public int soLuong
-        {
-            get
-            {
-                return SoLuong;
-            }
-            set
-            {
-                SoLuong = value;
-            }
-        }
-        public float donGiaNhap
-        {
-            get
-            {
-                return DonGiaNhap;
-            }
-            set
-            {
-                DonGiaNhap = value;
-            }
-        }
-        public float donGiaBan
-        {
-            get
-            {
-                return DonGiaBan;
-            }
-            set
-            {
-                DonGiaBan = value;
-            }
-        }
-        public string hinhAnh
-        {
-            get
-            {
-                return HinhAnh;
-            }
-            set
-            {
-                HinhAnh = value;
-            }
-        }
-        public string ghiChu
-        {
-            get
-            {
-                return GhiChu;
-            }
-            set
-            {
-                GhiChu = value;
-            }
-        }
-        public string email
-        {
-            get
-            {
-                return Email;
-            }
-            set
-            {
-                Email = value;
-            }
         }
 
-        public DTO_Hang(int _maHang,string _tenHang , int _soLuong , float _donGiaNhap , float _donGiaBan , string _hinhAnh , string _ghiChu)
+        public DTO_Hang(int maHang, string tenHang, int soLuong, float donGiaNhap, float donGiaBan, byte[] hinhAnh, string ghiChu, string email)
         {
-            this.maHang = _maHang;
-            this.tenHang = _tenHang;
-            this.soLuong = _soLuong;
-            this.donGiaNhap = _donGiaNhap;
-            this.donGiaBan = _donGiaBan;
-            this.hinhAnh = _hinhAnh;
-            this.ghiChu = _ghiChu;
+            this.MaHang = maHang;
+            this.TenHang = tenHang;
+            this.SoLuong = soLuong;
+            this.DonGiaNhap = donGiaNhap;
+            this.DonGiaBan = donGiaBan;
+            this.HinhAnh = hinhAnh;
+            this.GhiChu = ghiChu;
+            this.Email = email;
         }
-        public DTO_Hang(string _tenHang, int _soLuong, float _donGiaNhap, float _donGiaBan, string _hinhAnh, string _ghiChu , string _email)
+
+        public DTO_Hang(string tenHang, int soLuong, float donGiaNhap, float donGiaBan, byte[] hinhAnh, string ghiChu, string email)
         {
-            this.tenHang = _tenHang;
-            this.soLuong = _soLuong;
-            this.donGiaNhap = _donGiaNhap;
-            this.donGiaBan = _donGiaBan;
-            this.hinhAnh = _hinhAnh;
-            this.ghiChu = _ghiChu;
-            this.email = _email;
+            this.TenHang = tenHang;
+            this.SoLuong = soLuong;
+            this.DonGiaNhap = donGiaNhap;
+            this.DonGiaBan = donGiaBan;
+            this.HinhAnh = hinhAnh;
+            this.GhiChu = ghiChu;
+            this.Email = email;
         }
-        public DTO_Hang() { }
- 
+
+        public int MaHang { get => maHang; set => maHang = value; }
+        public string TenHang { get => tenHang; set => tenHang = value; }
+        public int SoLuong { get => soLuong; set => soLuong = value; }
+        public float DonGiaNhap { get => donGiaNhap; set => donGiaNhap = value; }
+        public float DonGiaBan { get => donGiaBan; set => donGiaBan = value; }
+        public byte[] HinhAnh { get => hinhAnh; set => hinhAnh = value; }
+        public string GhiChu { get => ghiChu; set => ghiChu = value; }
+        public string Email { get => email; set => email = value; }
     }
 }

@@ -1,6 +1,12 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudio,csharp,dotnetcore,executable,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,csharp,dotnetcore,executable,windows
+# Created by https://www.toptal.com/developers/gitignore/api/windows,csharp,visualstudio,advancedinstaller,executable
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,csharp,visualstudio,advancedinstaller,executable
+
+### AdvancedInstaller ###
+# Advanced Installer caches and default build output
+*-cache/
+*-SetupFiles/
+Prerequisites/
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -400,15 +406,6 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-### DotnetCore ###
-# .NET Core build folders
-bin/
-obj/
-
-# Common node modules locations
-/node_modules
-/wwwroot/node_modules
-
 ### Executable ###
 *.app
 *.bat
@@ -623,4 +620,4 @@ $RECYCLE.BIN/
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudio,csharp,dotnetcore,executable,windows
+# End of https://www.toptal.com/developers/gitignore/api/windows,csharp,visualstudio,advancedinstaller,executable
