@@ -68,12 +68,12 @@ namespace GUI_QLBanHang
             // lblmaNV
             // 
             this.lblmaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblmaNV.ForeColor = System.Drawing.Color.Aqua;
+            this.lblmaNV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblmaNV.Location = new System.Drawing.Point(134, 74);
             this.lblmaNV.Name = "lblmaNV";
             this.lblmaNV.Size = new System.Drawing.Size(157, 21);
             this.lblmaNV.TabIndex = 4;
-            this.lblmaNV.Text = "Tên nhân viên: ";
+            this.lblmaNV.Text = "Mã nhân viên";
             // 
             // label3
             // 
@@ -89,12 +89,12 @@ namespace GUI_QLBanHang
             // lblTenNV
             // 
             this.lblTenNV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTenNV.ForeColor = System.Drawing.Color.Aqua;
+            this.lblTenNV.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblTenNV.Location = new System.Drawing.Point(134, 108);
             this.lblTenNV.Name = "lblTenNV";
             this.lblTenNV.Size = new System.Drawing.Size(157, 21);
             this.lblTenNV.TabIndex = 4;
-            this.lblTenNV.Text = "Tên nhân viên: ";
+            this.lblTenNV.Text = "Tên nhân viên";
             // 
             // label5
             // 
@@ -110,12 +110,12 @@ namespace GUI_QLBanHang
             // lblDiaChi
             // 
             this.lblDiaChi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDiaChi.ForeColor = System.Drawing.Color.Aqua;
+            this.lblDiaChi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblDiaChi.Location = new System.Drawing.Point(134, 143);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(157, 21);
             this.lblDiaChi.TabIndex = 4;
-            this.lblDiaChi.Text = "Tên nhân viên: ";
+            this.lblDiaChi.Text = "Địa chỉ";
             // 
             // label7
             // 
@@ -131,12 +131,12 @@ namespace GUI_QLBanHang
             // lblVaiTro
             // 
             this.lblVaiTro.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblVaiTro.ForeColor = System.Drawing.Color.Aqua;
+            this.lblVaiTro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblVaiTro.Location = new System.Drawing.Point(134, 177);
             this.lblVaiTro.Name = "lblVaiTro";
             this.lblVaiTro.Size = new System.Drawing.Size(157, 21);
             this.lblVaiTro.TabIndex = 4;
-            this.lblVaiTro.Text = "Tên nhân viên: ";
+            this.lblVaiTro.Text = "Vai trò";
             // 
             // label9
             // 
@@ -152,18 +152,18 @@ namespace GUI_QLBanHang
             // lblTinhTrang
             // 
             this.lblTinhTrang.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTinhTrang.ForeColor = System.Drawing.Color.Aqua;
+            this.lblTinhTrang.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblTinhTrang.Location = new System.Drawing.Point(134, 211);
             this.lblTinhTrang.Name = "lblTinhTrang";
             this.lblTinhTrang.Size = new System.Drawing.Size(157, 21);
             this.lblTinhTrang.TabIndex = 4;
-            this.lblTinhTrang.Text = "Tên nhân viên: ";
+            this.lblTinhTrang.Text = "Tình trạng";
             // 
             // frmThongTinNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(303, 257);
             this.Controls.Add(this.lblTinhTrang);
             this.Controls.Add(this.label9);
@@ -176,7 +176,6 @@ namespace GUI_QLBanHang
             this.Controls.Add(this.lblmaNV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblEmail);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmThongTinNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

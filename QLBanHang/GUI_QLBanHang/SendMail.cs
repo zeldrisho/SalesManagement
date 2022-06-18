@@ -29,13 +29,14 @@ namespace GUI_QLBanHang
 
         private void send()
         {
-            // login email để gửi tin 
-            // tự thay tài khoản email và password của tài khoản gmail mún gửi tin 
-            // nhớ cho phép login ứng dụng kém an toàn nhá
+            // Tự thay email và password của tài khoản gmail dùng để gửi
+            // Nhớ cho phép login ứng dụng kém an toàn (nếu tìm không thấy thì dùng mail edu)
             string loginEmail = "2024801030101@student.tdmu.edu.vn";
             string loginPassword = "Trung@tftmobile";
-            BUS_Mail mail = new BUS_Mail(loginEmail, loginPassword); // tạo đối tượng để gửi mail truyền tk,pass để login
-            result = mail.sendMail(email, password,isUpdate) ; // nếu là cập nhật mật khẩu thì true, còn nếu là mật khẩu thì false;
+            // Tạo đối tượng để gửi mail truyền email, pass để login
+            BUS_Mail mail = new BUS_Mail(loginEmail, loginPassword);
+            // Nếu là cập nhật mật khẩu thì true, còn nếu là mật khẩu thì false
+            result = mail.sendMail(email, password,isUpdate);
             pictureBox1.Invoke(new Action(() => Close()));
         }
     }

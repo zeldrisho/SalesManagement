@@ -19,7 +19,6 @@ namespace GUI_QLBanHang
         {
             menuHuongDan.Cursor = Cursors.Hand;
             menuTaiKhoan.Cursor = Cursors.Hand;
-
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
@@ -49,20 +48,10 @@ namespace GUI_QLBanHang
 
         private void btnGuild_Click(object sender, EventArgs e)
         {
-            this.menuHuongDan.Show(pnMenu, new Point(206,456));
-        }
-
-        private void btnGuild_MouseHover(object sender, EventArgs e)
-        {
-           this.menuHuongDan.Show(pnMenu, new Point(206, 456));
+            menuHuongDan.Show(pnMenu, new Point(206,456));
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
-        {
-            menuTaiKhoan.Show(pnMenu, new Point(206, 405));
-        }
-
-        private void btnAccount_MouseHover(object sender, EventArgs e)
         {
             menuTaiKhoan.Show(pnMenu, new Point(206, 405));
         }
@@ -76,8 +65,6 @@ namespace GUI_QLBanHang
                     flogin.ShowDialog();
                     if (flogin.getSuccess)
                     {
-                        // đã đăng nhập thành công
-
                         email = flogin.getEmail;
                         resetValue();
                         btnLogin.Text = "Đăng xuất";
@@ -91,7 +78,7 @@ namespace GUI_QLBanHang
                         {
                             btnProduct_Click(sender, e);
                         }
-                    }//đăng nhập không thành công thì không làm gì
+                    }
                 }
             }
             else
@@ -159,7 +146,6 @@ namespace GUI_QLBanHang
         private void itemGioiThieu_Click(object sender, EventArgs e)
         {
             Process.Start("Gioithieu.txt");
-
         }
     }
 }

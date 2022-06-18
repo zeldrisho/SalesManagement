@@ -11,23 +11,13 @@ namespace GUI_QLBanHang
         }
         
         private bool isSuccess = false;
-        public string getEmail
-        {
-            get
-            {
-                return txtEmail.Text;
-            }
-        }
-        public bool getSuccess
-        {
-            get { return isSuccess; }
-        } 
 
+        public bool getSuccess { get => isSuccess; }
+        public string getEmail { get => txtEmail.Text; }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
-            if (txtEmail.Text !="" && txtPassword.Text != "")
+            if (txtEmail.Text != "" && txtPassword.Text != "")
             {
                 BUS_NhanVien nv = new BUS_NhanVien();
                 if (nv.DangNhap(txtEmail.Text , txtPassword.Text))
@@ -38,11 +28,9 @@ namespace GUI_QLBanHang
                     {
                         Properties.Settings.Default.Email = txtEmail.Text;
                         Properties.Settings.Default.Password = txtPassword.Text;
-              
                     }
                     Properties.Settings.Default.Save();
                     Close();
-                    
                 }
                 else
                 {
@@ -55,20 +43,16 @@ namespace GUI_QLBanHang
             }
         }
     
-
         private void lblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (txtEmail.Text != "")
             {
-             
-                // check email 
                 BUS_NhanVien busNV = new BUS_NhanVien();
                 if (busNV.checkEmail(txtEmail.Text))
                 {
-              
                     string password = busNV.getPassword();
 
-                    if (busNV.updateMatKhau(txtEmail.Text , password))
+                    if (busNV.updateMatKhau(txtEmail.Text, password))
                     {
                         SendMail load = new SendMail(txtEmail.Text, password, true);
                         load.ShowDialog();

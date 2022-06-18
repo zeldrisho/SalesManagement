@@ -160,15 +160,15 @@ namespace GUI_QLBanHang
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.BorderRadius = 15;
+            this.btnChangePassword.BorderRadius = 5;
             this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnChangePassword.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnChangePassword.FillColor2 = System.Drawing.SystemColors.HotTrack;
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.Location = new System.Drawing.Point(8, 336);
+            this.btnChangePassword.Location = new System.Drawing.Point(17, 336);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(366, 36);
+            this.btnChangePassword.Size = new System.Drawing.Size(354, 36);
             this.btnChangePassword.TabIndex = 6;
             this.btnChangePassword.Text = "Đổi mật khẩu";
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
@@ -178,8 +178,8 @@ namespace GUI_QLBanHang
             this.AcceptButton = this.btnChangePassword;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(383, 380);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(383, 390);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.txtNewPassword2);
             this.Controls.Add(this.label4);

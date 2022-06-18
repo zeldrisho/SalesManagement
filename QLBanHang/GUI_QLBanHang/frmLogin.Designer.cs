@@ -30,7 +30,6 @@ namespace GUI_QLBanHang
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -38,18 +37,9 @@ namespace GUI_QLBanHang
             this.chkRememberMe = new Guna.UI2.WinForms.Guna2CheckBox();
             this.lblForgotPassword = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI_QLBanHang.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(67, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(268, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -136,7 +126,7 @@ namespace GUI_QLBanHang
             // 
             this.lblForgotPassword.AutoSize = true;
             this.lblForgotPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblForgotPassword.LinkColor = System.Drawing.Color.Blue;
+            this.lblForgotPassword.LinkColor = System.Drawing.Color.DodgerBlue;
             this.lblForgotPassword.Location = new System.Drawing.Point(270, 281);
             this.lblForgotPassword.Name = "lblForgotPassword";
             this.lblForgotPassword.Size = new System.Drawing.Size(114, 20);
@@ -149,7 +139,7 @@ namespace GUI_QLBanHang
             // 
             this.btnLogin.BorderRadius = 5;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnLogin.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnLogin.FillColor2 = System.Drawing.SystemColors.HotTrack;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
@@ -160,12 +150,23 @@ namespace GUI_QLBanHang
             this.btnLogin.Text = "ĐĂNG NHẬP";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GUI_QLBanHang.Properties.Resources.product_500px;
+            this.pictureBox1.Location = new System.Drawing.Point(43, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(313, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(398, 363);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblForgotPassword);
@@ -188,8 +189,6 @@ namespace GUI_QLBanHang
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
@@ -197,5 +196,6 @@ namespace GUI_QLBanHang
         private Guna.UI2.WinForms.Guna2CheckBox chkRememberMe;
         private System.Windows.Forms.LinkLabel lblForgotPassword;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

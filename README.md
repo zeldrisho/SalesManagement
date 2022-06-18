@@ -10,7 +10,7 @@
 - SQL Server 2019 Express, Azure SQL Database
 - .NET Framework 4.7.2
 - ADO.NET
-- Guna.UI2.WinForms 2.0.3.2, DevExpress 21.2
+- Guna.UI2.WinForms 2.0.3.2
 - Advanced Installer 19.5
 
 ## Hướng dẫn

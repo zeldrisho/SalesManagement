@@ -113,7 +113,6 @@ namespace GUI_QLBanHang
             this.btnAccount.UseTransparentBackground = true;
             this.btnAccount.Visible = false;
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
-            this.btnAccount.MouseHover += new System.EventHandler(this.btnAccount_MouseHover);
             // 
             // lblEmail
             // 
@@ -179,7 +178,6 @@ namespace GUI_QLBanHang
             this.btnGuild.Text = "Hướng dẫn";
             this.btnGuild.UseTransparentBackground = true;
             this.btnGuild.Click += new System.EventHandler(this.btnGuild_Click);
-            this.btnGuild.MouseHover += new System.EventHandler(this.btnGuild_MouseHover);
             // 
             // btnStatistic
             // 
