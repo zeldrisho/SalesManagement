@@ -108,7 +108,7 @@ namespace GUI_QLBanHang
             this.btnAccount.Location = new System.Drawing.Point(3, 401);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(202, 45);
-            this.btnAccount.TabIndex = 4;
+            this.btnAccount.TabIndex = 5;
             this.btnAccount.Text = "Tài khoản";
             this.btnAccount.UseTransparentBackground = true;
             this.btnAccount.Visible = false;
@@ -152,7 +152,7 @@ namespace GUI_QLBanHang
             this.btnLogin.Location = new System.Drawing.Point(5, 605);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(202, 45);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseTransparentBackground = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -174,7 +174,7 @@ namespace GUI_QLBanHang
             this.btnGuild.Location = new System.Drawing.Point(3, 452);
             this.btnGuild.Name = "btnGuild";
             this.btnGuild.Size = new System.Drawing.Size(202, 45);
-            this.btnGuild.TabIndex = 2;
+            this.btnGuild.TabIndex = 6;
             this.btnGuild.Text = "Hướng dẫn";
             this.btnGuild.UseTransparentBackground = true;
             this.btnGuild.Click += new System.EventHandler(this.btnGuild_Click);
@@ -219,7 +219,7 @@ namespace GUI_QLBanHang
             this.btnProduct.Location = new System.Drawing.Point(3, 299);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(202, 45);
-            this.btnProduct.TabIndex = 2;
+            this.btnProduct.TabIndex = 3;
             this.btnProduct.Text = "Sản phẩm";
             this.btnProduct.UseTransparentBackground = true;
             this.btnProduct.Visible = false;
@@ -242,7 +242,7 @@ namespace GUI_QLBanHang
             this.btnCustomer.Location = new System.Drawing.Point(3, 350);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(202, 45);
-            this.btnCustomer.TabIndex = 2;
+            this.btnCustomer.TabIndex = 4;
             this.btnCustomer.Text = "Khách hàng";
             this.btnCustomer.UseTransparentBackground = true;
             this.btnCustomer.Visible = false;
@@ -265,7 +265,7 @@ namespace GUI_QLBanHang
             this.btnEmployee.Location = new System.Drawing.Point(3, 197);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(202, 45);
-            this.btnEmployee.TabIndex = 2;
+            this.btnEmployee.TabIndex = 1;
             this.btnEmployee.Text = "Nhân viên";
             this.btnEmployee.UseTransparentBackground = true;
             this.btnEmployee.Visible = false;
@@ -406,7 +406,7 @@ namespace GUI_QLBanHang
             this.guna2ControlBox1.Location = new System.Drawing.Point(1087, 1);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
-            this.guna2ControlBox1.TabIndex = 1;
+            this.guna2ControlBox1.TabIndex = 2;
             // 
             // guna2ControlBox2
             // 
@@ -418,7 +418,7 @@ namespace GUI_QLBanHang
             this.guna2ControlBox2.Location = new System.Drawing.Point(1036, 1);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 30);
-            this.guna2ControlBox2.TabIndex = 3;
+            this.guna2ControlBox2.TabIndex = 1;
             // 
             // guna2ControlBox3
             // 
@@ -430,7 +430,7 @@ namespace GUI_QLBanHang
             this.guna2ControlBox3.Location = new System.Drawing.Point(985, 1);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(45, 30);
-            this.guna2ControlBox3.TabIndex = 4;
+            this.guna2ControlBox3.TabIndex = 0;
             // 
             // frmMain
             // 

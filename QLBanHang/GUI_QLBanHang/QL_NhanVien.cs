@@ -1,9 +1,10 @@
-﻿using System;
+﻿using BUS_QLBanHang;
+using DTO_QLBanHang;
+using System;
 using System.Data;
 using System.Net.Mail;
 using System.Windows.Forms;
-using BUS_QLBanHang;
-using DTO_QLBanHang;
+
 namespace GUI_QLBanHang
 {
     public partial class QL_NhanVien : UserControl
@@ -80,6 +81,7 @@ namespace GUI_QLBanHang
         {
             showNhanVien();
             setValue(true, false);
+            txtEmail.Focus();
         }
      
         private void btnShowAll_Click(object sender, EventArgs e)
@@ -193,21 +195,36 @@ namespace GUI_QLBanHang
             setValue(true, false);
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        //private void btnTimKiem_Click(object sender, EventArgs e)
+        //{
+        //    if (txtSearch.Text != "")
+        //    {
+        //        DataTable data = busNV.searchNhanVien(txtSearch.Text);
+        //        if (data.Rows.Count >0)
+        //        {
+        //            dataGridViewNhanVien.DataSource = data;
+        //            loadGridView();
+        //        }
+        //        else
+        //        {
+        //            msgBox("Không tìm thấy nhân viên nào!");
+        //        }
+        //    }else msgBox("Vui lòng nhập tên cần tìm kiếm", true);
+        //}
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (txttimkiem.Text != "")
+            string name = txtSearch.Text.Trim();
+            if (name == "")
             {
-                DataTable data = busNV.searchNhanVien(txttimkiem.Text);
-                if (data.Rows.Count >0)
-                {
-                    dataGridViewNhanVien.DataSource = data;
-                    loadGridView();
-                }
-                else
-                {
-                    msgBox("Không tìm thấy nhân viên nào!");
-                }
-            }else msgBox("Vui lòng nhập tên cần tìm kiếm", true);
+                QL_NhanVien_Load(sender, e);
+                txtSearch.Focus();
+            }
+            else
+            {
+                DataTable data = busNV.searchNhanVien(txtSearch.Text);
+                dataGridViewNhanVien.DataSource = data;
+            }
         }
     }
 }

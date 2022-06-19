@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using BUS_QLBanHang;
+
 namespace GUI_QLBanHang
 {
     public partial class frmMain : Form
@@ -19,6 +20,7 @@ namespace GUI_QLBanHang
         {
             menuHuongDan.Cursor = Cursors.Hand;
             menuTaiKhoan.Cursor = Cursors.Hand;
+            btnLogin.Focus();
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)

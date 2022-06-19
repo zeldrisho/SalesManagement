@@ -40,5 +40,10 @@ namespace GUI_QLBanHang
             }
             else MessageBox.Show("Vui lòng nhập mật khẩu cũ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void frmChangePassword_Load(object sender, EventArgs e)
+        {
+            txtOldPassword.Focus();
+        }
     }
 }

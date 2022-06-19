@@ -2,83 +2,35 @@
 {
     public class DTO_KhachHang
     {
+        private string soDienThoai;
+        private string tenKhach;
+        private string diaChi;
+        private string phai;
+        private string emailNV;
 
-        private string DienThoai;
-        private string TenKhach;
-        private string DiaChi;
-        private string Phai;
-        private string email;
-        public string soDienThoai
-        {
-            get
-            {
-                return DienThoai;
-            }
-            set
-            {
-                DienThoai = value;
-            }
-        }
-        public string tenKhach
-        {
-            get
-            {
-                return TenKhach;
-            }
-            set
-            {
-                TenKhach = value;
-            }
-        }
+        public string SoDienThoai { get => soDienThoai; set => soDienThoai = value; }
+        public string TenKhach { get => tenKhach; set => tenKhach = value; }
+        public string DiaChi { get => diaChi; set => diaChi = value; }
+        public string Phai { get => phai; set => phai = value; }
+        public string EmailNV { get => emailNV; set => emailNV = value; }
 
-        public string diaChi
-        {
-            get
-            {
-                return DiaChi;
-            }
-            set
-            {
-                DiaChi = value;
-            }
-        }
-        public string phai
-        {
-            get
-            {
-                return Phai;
-            }
-            set
-            {
-                Phai = value;
-            }
-        }
-        public string emailNV
-        {
-            get
-            {
-                return email;
-            }
-            set
-            {
-                email = value;
-            }
-        }
-        public DTO_KhachHang(string _dienthoai, string _tenKhach, string _diaChi, string _phai, string _email)
-        {
-            this.soDienThoai = _dienthoai;
-            this.tenKhach = _tenKhach;
-            this.diaChi = _diaChi;
-            this.phai = _phai;
-            this.emailNV = _email;
-        }
-        public DTO_KhachHang(string _dienthoai, string _tenKhach, string _diaChi, string _phai)
-        {
-            this.soDienThoai = _dienthoai;
-            this.tenKhach = _tenKhach;
-            this.diaChi = _diaChi;
-            this.phai = _phai;
-        }
         public DTO_KhachHang() { }
+
+        public DTO_KhachHang(string soDienThoai, string tenKhach, string diaChi, string phai)
+        {
+            this.soDienThoai = soDienThoai;
+            this.tenKhach = tenKhach;
+            this.diaChi = diaChi;
+            this.phai = phai;
+        }
+
+        public DTO_KhachHang(string soDienThoai, string tenKhach, string diaChi, string phai, string emailNV)
+        {
+            this.soDienThoai = soDienThoai;
+            this.tenKhach = tenKhach;
+            this.diaChi = diaChi;
+            this.phai = phai;
+            this.emailNV = emailNV;
+        }
     }
 }

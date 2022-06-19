@@ -92,6 +92,7 @@ namespace GUI_QLBanHang
         private void QL_KhachHang_Load(object sender, EventArgs e)
         {
             showKhachHang();
+            txtDienThoai.Focus();
         }
         private void btnShowAll_Click(object sender, EventArgs e)
         {
@@ -162,17 +163,32 @@ namespace GUI_QLBanHang
 
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        //private void btnTimKiem_Click(object sender, EventArgs e)
+        //{
+        //    if (txtSearch.Text !="")
+        //    {
+        //        DataTable data = busKH.searchKhachHang(txtSearch.Text);
+        //        if (data.Rows.Count > 0)
+        //        {
+        //            dataGridViewKhachHang.DataSource = data;
+        //            loadGridView();
+        //        }
+        //        else msgBox("Không tìm thấy khách hàng nào");
+        //    }
+        //}
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (txtTimKiem.Text !="")
+            string name = txtSearch.Text.Trim();
+            if (name == "")
             {
-                DataTable data = busKH.searchKhachHang(txtTimKiem.Text);
-                if (data.Rows.Count > 0)
-                {
-                    dataGridViewKhachHang.DataSource = data;
-                    loadGridView();
-                }
-                else msgBox("Không tìm thấy khách hàng nào");
+                QL_KhachHang_Load(sender, e);
+                txtSearch.Focus();
+            }
+            else
+            {
+                DataTable data = busKH.searchKhachHang(txtSearch.Text);
+                dataGridViewKhachHang.DataSource = data;
             }
         }
     }

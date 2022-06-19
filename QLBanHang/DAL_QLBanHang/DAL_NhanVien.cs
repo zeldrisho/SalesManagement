@@ -276,14 +276,11 @@ namespace DAL_QLBanHang
                 DataTable data = new DataTable();
                 data.Load(cmd.ExecuteReader());
                 return data;
-
             }
-            
             finally
             {
                 _conn.Close();
             }
-
         }
 
         //thong tin nhan vien 

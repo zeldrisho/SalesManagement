@@ -40,8 +40,7 @@ namespace GUI_QLBanHang
             this.txtDienThoai = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTimKiem = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnShowAll = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDiaChi = new System.Windows.Forms.RichTextBox();
@@ -65,10 +64,10 @@ namespace GUI_QLBanHang
             this.rdoNu.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdoNu.CheckedState.InnerOffset = -4;
             this.rdoNu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoNu.Location = new System.Drawing.Point(284, 133);
+            this.rdoNu.Location = new System.Drawing.Point(236, 132);
             this.rdoNu.Name = "rdoNu";
             this.rdoNu.Size = new System.Drawing.Size(48, 24);
-            this.rdoNu.TabIndex = 2;
+            this.rdoNu.TabIndex = 3;
             this.rdoNu.Text = "Nữ";
             this.rdoNu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdoNu.UncheckedState.BorderThickness = 2;
@@ -86,7 +85,7 @@ namespace GUI_QLBanHang
             this.rdoNam.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdoNam.CheckedState.InnerOffset = -4;
             this.rdoNam.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoNam.Location = new System.Drawing.Point(164, 132);
+            this.rdoNam.Location = new System.Drawing.Point(142, 132);
             this.rdoNam.Name = "rdoNam";
             this.rdoNam.Size = new System.Drawing.Size(60, 24);
             this.rdoNam.TabIndex = 2;
@@ -110,7 +109,7 @@ namespace GUI_QLBanHang
             this.txtTenKhach.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtTenKhach.ForeColor = System.Drawing.Color.Black;
             this.txtTenKhach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenKhach.Location = new System.Drawing.Point(164, 71);
+            this.txtTenKhach.Location = new System.Drawing.Point(142, 71);
             this.txtTenKhach.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTenKhach.Name = "txtTenKhach";
             this.txtTenKhach.PasswordChar = '\0';
@@ -123,7 +122,7 @@ namespace GUI_QLBanHang
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 132);
+            this.label5.Location = new System.Drawing.Point(9, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 25);
             this.label5.TabIndex = 0;
@@ -133,11 +132,11 @@ namespace GUI_QLBanHang
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 82);
+            this.label2.Location = new System.Drawing.Point(9, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 25);
+            this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Tên Nhân Viên: ";
+            this.label2.Text = "Họ tên:";
             // 
             // txtDienThoai
             // 
@@ -151,76 +150,55 @@ namespace GUI_QLBanHang
             this.txtDienThoai.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtDienThoai.ForeColor = System.Drawing.Color.Black;
             this.txtDienThoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDienThoai.Location = new System.Drawing.Point(164, 21);
+            this.txtDienThoai.Location = new System.Drawing.Point(142, 17);
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.PasswordChar = '\0';
             this.txtDienThoai.PlaceholderText = "";
             this.txtDienThoai.SelectedText = "";
             this.txtDienThoai.Size = new System.Drawing.Size(300, 36);
-            this.txtDienThoai.TabIndex = 1;
+            this.txtDienThoai.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(522, 28);
+            this.label4.Location = new System.Drawing.Point(513, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 25);
+            this.label4.Size = new System.Drawing.Size(81, 25);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Địa Chỉ: ";
+            this.label4.Text = "Địa chỉ: ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 28);
+            this.label1.Location = new System.Drawing.Point(9, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Số điện thoại: ";
             // 
-            // btnTimKiem
+            // txtSearch
             // 
-            this.btnTimKiem.Animated = true;
-            this.btnTimKiem.BackColor = System.Drawing.Color.Transparent;
-            this.btnTimKiem.BorderRadius = 8;
-            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimKiem.CustomImages.Image = global::GUI_QLBanHang.Properties.Resources.timkiem;
-            this.btnTimKiem.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
-            this.btnTimKiem.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.btnTimKiem.Location = new System.Drawing.Point(462, 231);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(216, 45);
-            this.btnTimKiem.TabIndex = 8;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseTransparentBackground = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimKiem.DefaultText = "";
-            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.Location = new System.Drawing.Point(4, 235);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.PasswordChar = '\0';
-            this.txtTimKiem.PlaceholderText = "Nhập tên khách hàng";
-            this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(451, 36);
-            this.txtTimKiem.TabIndex = 6;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(4, 235);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Nhập tên khách hàng";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(451, 36);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnShowAll
             // 
@@ -239,8 +217,8 @@ namespace GUI_QLBanHang
             this.btnShowAll.Location = new System.Drawing.Point(684, 231);
             this.btnShowAll.Name = "btnShowAll";
             this.btnShowAll.Size = new System.Drawing.Size(216, 45);
-            this.btnShowAll.TabIndex = 9;
-            this.btnShowAll.Text = "Show All";
+            this.btnShowAll.TabIndex = 2;
+            this.btnShowAll.Text = "Hiện tất cả";
             this.btnShowAll.UseTransparentBackground = true;
             this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
@@ -267,10 +245,10 @@ namespace GUI_QLBanHang
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(622, 21);
+            this.txtDiaChi.Location = new System.Drawing.Point(600, 17);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(271, 136);
-            this.txtDiaChi.TabIndex = 8;
+            this.txtDiaChi.Size = new System.Drawing.Size(271, 90);
+            this.txtDiaChi.TabIndex = 4;
             this.txtDiaChi.Text = "";
             // 
             // btnBoQua
@@ -291,7 +269,7 @@ namespace GUI_QLBanHang
             this.btnBoQua.Name = "btnBoQua";
             this.btnBoQua.Size = new System.Drawing.Size(216, 45);
             this.btnBoQua.TabIndex = 3;
-            this.btnBoQua.Text = "Clear";
+            this.btnBoQua.Text = "Huỷ";
             this.btnBoQua.UseTransparentBackground = true;
             this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
@@ -312,7 +290,7 @@ namespace GUI_QLBanHang
             this.btnSua.Location = new System.Drawing.Point(458, 3);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(216, 45);
-            this.btnSua.TabIndex = 3;
+            this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseTransparentBackground = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -334,7 +312,7 @@ namespace GUI_QLBanHang
             this.btnXoa.Location = new System.Drawing.Point(236, 3);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(216, 45);
-            this.btnXoa.TabIndex = 3;
+            this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseTransparentBackground = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -356,7 +334,7 @@ namespace GUI_QLBanHang
             this.btnThem.Location = new System.Drawing.Point(14, 3);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(216, 45);
-            this.btnThem.TabIndex = 3;
+            this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseTransparentBackground = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -446,8 +424,7 @@ namespace GUI_QLBanHang
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dataGridViewKhachHang);
-            this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnShowAll);
             this.Controls.Add(this.groupBox1);
             this.Name = "QL_KhachHang";
@@ -470,8 +447,7 @@ namespace GUI_QLBanHang
         private Guna.UI2.WinForms.Guna2TextBox txtDienThoai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnTimKiem;
-        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2GradientButton btnShowAll;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2GradientButton btnBoQua;

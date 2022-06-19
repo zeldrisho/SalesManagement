@@ -59,7 +59,7 @@ namespace GUI_QLBanHang
             this.txtEmail.ReadOnly = true;
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(354, 36);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 30;
             // 
             // label2
             // 
@@ -98,7 +98,7 @@ namespace GUI_QLBanHang
             this.txtOldPassword.PlaceholderText = "";
             this.txtOldPassword.SelectedText = "";
             this.txtOldPassword.Size = new System.Drawing.Size(354, 36);
-            this.txtOldPassword.TabIndex = 1;
+            this.txtOldPassword.TabIndex = 0;
             // 
             // label3
             // 
@@ -127,7 +127,7 @@ namespace GUI_QLBanHang
             this.txtNewPassword.PlaceholderText = "";
             this.txtNewPassword.SelectedText = "";
             this.txtNewPassword.Size = new System.Drawing.Size(354, 36);
-            this.txtNewPassword.TabIndex = 2;
+            this.txtNewPassword.TabIndex = 1;
             // 
             // label4
             // 
@@ -156,7 +156,7 @@ namespace GUI_QLBanHang
             this.txtNewPassword2.PlaceholderText = "";
             this.txtNewPassword2.SelectedText = "";
             this.txtNewPassword2.Size = new System.Drawing.Size(354, 36);
-            this.txtNewPassword2.TabIndex = 3;
+            this.txtNewPassword2.TabIndex = 2;
             // 
             // btnChangePassword
             // 
@@ -194,6 +194,7 @@ namespace GUI_QLBanHang
             this.Name = "frmChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đổi mật khẩu";
+            this.Load += new System.EventHandler(this.frmChangePassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

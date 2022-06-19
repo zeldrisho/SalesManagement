@@ -127,6 +127,7 @@ namespace GUI_QLBanHang
         {
             showHang();
             setValue(true, false);
+            txtTenHang.Focus();
         }
 
         private void btnShowAll_Click(object sender, EventArgs e)
@@ -262,23 +263,38 @@ namespace GUI_QLBanHang
             }
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            if (txtTimKiem.Text != "")
-            {
-                DataTable table = busHang.searchHang(txtTimKiem.Text);
-                if (table.Rows.Count > 0)
-                {
-                    dataGridViewHang.DataSource = table;
-                }
-                else
-                    msgBox("Không tìm thấy kết quả!");
-            }
-        }
+        //private void btnTimKiem_Click(object sender, EventArgs e)
+        //{
+        //    if (txtSearch.Text != "")
+        //    {
+        //        DataTable table = busHang.searchHang(txtSearch.Text);
+        //        if (table.Rows.Count > 0)
+        //        {
+        //            dataGridViewHang.DataSource = table;
+        //        }
+        //        else
+        //            msgBox("Không tìm thấy kết quả!");
+        //    }
+        //}
 
         private void btnBoQua_Click(object sender, EventArgs e)
         {
             setValue(true, false);
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string name = txtSearch.Text.Trim();
+            if (name == "")
+            {
+                QL_Hang_Load(sender, e);
+                txtSearch.Focus();
+            }
+            else
+            {
+                DataTable data = busHang.searchHang(txtSearch.Text);
+                dataGridViewHang.DataSource = data;
+            }
         }
     }
 }

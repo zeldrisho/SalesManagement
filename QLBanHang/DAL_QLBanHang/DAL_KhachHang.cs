@@ -38,11 +38,11 @@ namespace DAL_QLBanHang
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "InsertDataKhach";
-                cmd.Parameters.AddWithValue("DienThoai", khachHang.soDienThoai);
-                cmd.Parameters.AddWithValue("TenKhach", khachHang.tenKhach);
-                cmd.Parameters.AddWithValue("DiaChi", khachHang.diaChi);
-                cmd.Parameters.AddWithValue("Phai", khachHang.phai);
-                cmd.Parameters.AddWithValue("Email", khachHang.emailNV);
+                cmd.Parameters.AddWithValue("DienThoai", khachHang.SoDienThoai);
+                cmd.Parameters.AddWithValue("TenKhach", khachHang.TenKhach);
+                cmd.Parameters.AddWithValue("DiaChi", khachHang.DiaChi);
+                cmd.Parameters.AddWithValue("Phai", khachHang.Phai);
+                cmd.Parameters.AddWithValue("Email", khachHang.EmailNV);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
                 else
@@ -71,10 +71,10 @@ namespace DAL_QLBanHang
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "UpdateKhach";
-                cmd.Parameters.AddWithValue("dienThoai", khachHang.soDienThoai);
-                cmd.Parameters.AddWithValue("tenKhach", khachHang.tenKhach);
-                cmd.Parameters.AddWithValue("diaChi", khachHang.diaChi);
-                cmd.Parameters.AddWithValue("phai", khachHang.phai);
+                cmd.Parameters.AddWithValue("dienThoai", khachHang.SoDienThoai);
+                cmd.Parameters.AddWithValue("tenKhach", khachHang.TenKhach);
+                cmd.Parameters.AddWithValue("diaChi", khachHang.DiaChi);
+                cmd.Parameters.AddWithValue("phai", khachHang.Phai);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
                 else
