@@ -10,8 +10,10 @@
 - SQL Server 2019 Express, Azure SQL Database
 - .NET Framework 4.7.2
 - ADO.NET
-- Guna.UI2.WinForms 2.0.3.2
-- Advanced Installer 19.5
+- Guna.UI2.WinForms
+- Microsoft.ReportingServices.ReportViewerControl.Winforms
+- EPPlus, Microsoft.Office.Interop.Excel
+- Advanced Installer
 
 ## Hướng dẫn
 - Mở SSMS -> Chuột phải Databases -> Import Data-tier Application... -> Chọn DBQLBanHang.bacpac

@@ -20,7 +20,6 @@ namespace GUI_QLBanHang
         {
             menuHuongDan.Cursor = Cursors.Hand;
             menuTaiKhoan.Cursor = Cursors.Hand;
-            btnLogin.Focus();
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
@@ -34,7 +33,6 @@ namespace GUI_QLBanHang
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             panelControl.Controls.Clear();
-
             QL_KhachHang fkhachhang = new QL_KhachHang(email);
             fkhachhang.Dock = DockStyle.Fill;
             panelControl.Controls.Add(fkhachhang);
@@ -101,7 +99,7 @@ namespace GUI_QLBanHang
             btnProduct.Visible = isVisible;
             btnStatistic.Visible = isVisible;
             btnAccount.Visible = isVisible;
-            // kiểm tra vai tro | true = quản trị , false = nhân viên thường 
+            // Kiểm tra vai tro: true = admin, false = nhân viên
             if (!busNV.LayVaiTro(email))
             {
                 btnEmployee.Visible = false;

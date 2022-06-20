@@ -118,32 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="product_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\product_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="them" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\them.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="password_reset_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password_reset_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="timkiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\timkiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boqua" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boqua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="password_reset_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password_reset_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="product_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\product_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="classroom_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\classroom_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hoso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="classroom_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\classroom_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="statistic_icon_129319" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistic_icon_129319.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="them" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\them.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="combo_chart_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\combo_chart_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,11 +160,11 @@
   <data name="taikhoan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\taikhoan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="product_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\product_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="luu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\luu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boqua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boqua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pulse-1s-200px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pulse-1s-200px.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,22 +175,19 @@
   <data name="sua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="store" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\store.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="people_working_together_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\people_working_together_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="product_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\product_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gioithieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gioithieu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="store" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\store.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

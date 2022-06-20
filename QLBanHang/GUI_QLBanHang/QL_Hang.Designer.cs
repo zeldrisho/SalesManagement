@@ -29,10 +29,10 @@ namespace GUI_QLBanHang
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSoLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaHang = new Guna.UI2.WinForms.Guna2TextBox();
@@ -58,6 +58,7 @@ namespace GUI_QLBanHang
             this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSua = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnBoQua = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnStatistic = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHang)).BeginInit();
@@ -124,14 +125,14 @@ namespace GUI_QLBanHang
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Location = new System.Drawing.Point(17, 293);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.PlaceholderText = "Nhập tên hàng cần tìm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(452, 39);
+            this.txtSearch.Size = new System.Drawing.Size(438, 39);
             this.txtSearch.TabIndex = 10;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -351,7 +352,6 @@ namespace GUI_QLBanHang
             this.btnShowAll.BackColor = System.Drawing.Color.Transparent;
             this.btnShowAll.BorderRadius = 8;
             this.btnShowAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowAll.CustomImages.Image = global::GUI_QLBanHang.Properties.Resources.showall;
             this.btnShowAll.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnShowAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnShowAll.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -371,33 +371,33 @@ namespace GUI_QLBanHang
             // 
             this.dataGridViewHang.AllowUserToAddRows = false;
             this.dataGridViewHang.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.dataGridViewHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.dataGridViewHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewHang.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dataGridViewHang.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridViewHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewHang.ColumnHeadersHeight = 25;
             this.dataGridViewHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewHang.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 13F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewHang.DefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewHang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewHang.EnableHeadersVisualStyles = false;
             this.dataGridViewHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
@@ -406,8 +406,8 @@ namespace GUI_QLBanHang
             this.dataGridViewHang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridViewHang.RowHeadersVisible = false;
             this.dataGridViewHang.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            this.dataGridViewHang.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            this.dataGridViewHang.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewHang.RowTemplate.DividerHeight = 2;
             this.dataGridViewHang.RowTemplate.Height = 60;
             this.dataGridViewHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -443,7 +443,6 @@ namespace GUI_QLBanHang
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
             this.btnThem.BorderRadius = 8;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThem.CustomImages.Image = global::GUI_QLBanHang.Properties.Resources.them;
             this.btnThem.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnThem.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -465,7 +464,6 @@ namespace GUI_QLBanHang
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
             this.btnXoa.BorderRadius = 8;
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.CustomImages.Image = global::GUI_QLBanHang.Properties.Resources.xoa;
             this.btnXoa.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnXoa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -487,7 +485,6 @@ namespace GUI_QLBanHang
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
             this.btnSua.BorderRadius = 8;
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSua.CustomImages.Image = global::GUI_QLBanHang.Properties.Resources.sua;
             this.btnSua.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSua.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -495,6 +492,7 @@ namespace GUI_QLBanHang
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnSua.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnSua.ImageSize = new System.Drawing.Size(20, 2);
             this.btnSua.Location = new System.Drawing.Point(461, 238);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(216, 45);
@@ -509,7 +507,6 @@ namespace GUI_QLBanHang
             this.btnBoQua.BackColor = System.Drawing.Color.Transparent;
             this.btnBoQua.BorderRadius = 8;
             this.btnBoQua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBoQua.CustomImages.Image = global::GUI_QLBanHang.Properties.Resources.boqua;
             this.btnBoQua.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBoQua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnBoQua.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -525,11 +522,34 @@ namespace GUI_QLBanHang
             this.btnBoQua.UseTransparentBackground = true;
             this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
+            // btnStatistic
+            // 
+            this.btnStatistic.Animated = true;
+            this.btnStatistic.BackColor = System.Drawing.Color.Transparent;
+            this.btnStatistic.BorderRadius = 8;
+            this.btnStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatistic.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistic.CustomImages.ImageSize = new System.Drawing.Size(25, 20);
+            this.btnStatistic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnStatistic.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnStatistic.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnStatistic.ForeColor = System.Drawing.Color.White;
+            this.btnStatistic.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
+            this.btnStatistic.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnStatistic.Location = new System.Drawing.Point(461, 290);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Size = new System.Drawing.Size(216, 45);
+            this.btnStatistic.TabIndex = 21;
+            this.btnStatistic.Text = "Thống kê";
+            this.btnStatistic.UseTransparentBackground = true;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
+            // 
             // QL_Hang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.Controls.Add(this.btnStatistic);
             this.Controls.Add(this.dataGridViewHang);
             this.Controls.Add(this.btnBoQua);
             this.Controls.Add(this.btnShowAll);
@@ -575,5 +595,6 @@ namespace GUI_QLBanHang
         private Guna.UI2.WinForms.Guna2GradientButton btnSua;
         private Guna.UI2.WinForms.Guna2GradientButton btnBoQua;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnStatistic;
     }
 }

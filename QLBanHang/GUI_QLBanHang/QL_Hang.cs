@@ -91,12 +91,13 @@ namespace GUI_QLBanHang
             DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
             imgCol = (DataGridViewImageColumn)dataGridViewHang.Columns[5];
             imgCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
-
         }
+
         private bool checkIsNummber(string text)
         {
-            return int.TryParse(text,out int s);
+            return int.TryParse(text, out int s);
         }
+
         private void moHinh()
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -116,7 +117,7 @@ namespace GUI_QLBanHang
                 img = imageToByteArray(pcbSanPham);
             }
         }
-        // show 
+
         private void showHang()
         {
             dataGridViewHang.DataSource = busHang.DanhSachHang();
@@ -160,9 +161,7 @@ namespace GUI_QLBanHang
                     showHang();
                     //if (File.Exists(fileSavePath))
                     //    File.Delete(fileSavePath);
-
                     //File.Copy(fileAddress, fileSavePath);
-
                     msgBox("Thêm sản phẩm thành công");
                 }
                 else
@@ -295,6 +294,12 @@ namespace GUI_QLBanHang
                 DataTable data = busHang.searchHang(txtSearch.Text);
                 dataGridViewHang.DataSource = data;
             }
+        }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            frmProductReport frmProductReport = new frmProductReport();
+            frmProductReport.ShowDialog();
         }
     }
 }

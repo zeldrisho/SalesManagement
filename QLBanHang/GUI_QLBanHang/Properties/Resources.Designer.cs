@@ -223,6 +223,16 @@ namespace GUI_QLBanHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap statistic_icon_129319 {
+            get {
+                object obj = ResourceManager.GetObject("statistic_icon_129319", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap store {
             get {
                 object obj = ResourceManager.GetObject("store", resourceCulture);

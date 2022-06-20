@@ -1,32 +1,33 @@
 ﻿using DAL_QLBanHang;
 using DTO_QLBanHang;
 using System.Data;
+
 namespace BUS_QLBanHang
 {
     public class BUS_Hang
     {
-        //xem danh sách 
+        // Xem danh sách 
         DAL_Hang dalHang = new DAL_Hang();
         public DataTable DanhSachHang()
         {
             return dalHang.danhSachHang();
         }
-        //thêm
+
         public bool insertHang(DTO_Hang hang)
         {
             return dalHang.insertHang(hang);
         }
-        // cập nhật
+
         public bool updateHang(DTO_Hang hang)
         {
             return dalHang.updateHang(hang);
         }
-        // xóa
+
         public bool deleteHang(string mahang)
         {
             return dalHang.deleteHang(mahang);
         }
-        // tìm kiêm
+
         public DataTable searchHang(string tenHang)
         {
             return dalHang.searchHang(tenHang);
@@ -36,11 +37,10 @@ namespace BUS_QLBanHang
         {
             return dalHang.thongKeTonKho();
         }
+
         public DataTable thongKeSP()
         {
             return dalHang.thongKeSP();
         }
-
     }
-
 }
