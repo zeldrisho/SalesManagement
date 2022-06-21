@@ -260,7 +260,7 @@
     <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
-    <ROW Name="product_128px.exe" SourcePath="C:\Users\hosyg_s5k\Downloads\icons\product_128px.ico" Index="0"/>
+    <ROW Name="product_128px.exe" SourcePath="C:\Users\hosyg_s5k\Downloads\assets\product_128px.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>

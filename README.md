@@ -1,8 +1,32 @@
 # Phần mềm quản lý bán hàng
 
+## Screenshots
 <details>
-  <summary>Screenshots</summary>
-  <img src="https://i.imgur.com/y5hMket.png" />
+  <summary>Click here</summary>
+  <ul>
+    <li>Màn hình chính</li>
+    <img src="https://i.imgur.com/qAhffhd.png" />
+    <li>Form đăng nhập</li>
+    <img src="https://i.imgur.com/IlE2iJg.png" />
+    <li>Form nhân viên</li>
+    <img src="https://i.imgur.com/LpYR6ds.png" />
+    <li>Form thống kê</li>
+    <img src="https://i.imgur.com/dmBU76X.png" />
+    <li>Form sản phẩm</li>
+    <img src="https://i.imgur.com/fvRF5N6.png" />
+    <li>Form khách hàng</li>
+    <img src="https://i.imgur.com/WXjcitn.png" />
+    <li>Form hồ sơ nhân viên</li>
+    <img src="https://i.imgur.com/48GObnU.png" />
+    <li>Form đổi mật khẩu</li>
+    <img src="https://i.imgur.com/vNn32NY.png" />
+    <li>Database diagram</li>
+    <img src="https://i.imgur.com/DP8kNYC.png" />
+    <li>Tự động gửi mail chứa thông tin đăng nhập khi thêm nhân viên mới</li>
+    <img src="https://i.imgur.com/U0rRrfF.jpg" />
+    <li>Tự động gửi mail chứa mật khẩu mới khi ấn quên mật khẩu</li>
+    <img src="https://i.imgur.com/bNjNfD3.png" />
+  </ul>
 </details>
 
 ## Công nghệ được sử dụng
@@ -16,8 +40,8 @@
 - Advanced Installer
 
 ## Hướng dẫn
-- Mở SSMS -> Chuột phải Databases -> Import Data-tier Application... -> Chọn DBQLBanHang.bacpac
-- Dùng Visual Studio mở QLBanHang.sln
+- Dùng SSMS run query DBQLBanHang-script.sql
+- Dùng Visual Studio mở QLBanHang/QLBanHang.sln
 - Thay đổi connection string trong App.config cho phù hợp
 - Register Guna Framework để edit form
 - Chức năng send mail: sửa tài khoản, mật khẩu ở QLBanHang/GUI_QLBanHang/SendMail.cs
