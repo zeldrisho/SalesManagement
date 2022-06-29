@@ -52,13 +52,14 @@ namespace GUI_QLBanHang
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnShowAll = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dataGridViewHang = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnThem = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSua = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnBoQua = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnStatistic = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnImportExcel = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnExportExcel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHang)).BeginInit();
@@ -127,12 +128,13 @@ namespace GUI_QLBanHang
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(17, 293);
+            this.txtSearch.Location = new System.Drawing.Point(14, 299);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên hàng cần tìm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(438, 39);
+            this.txtSearch.Size = new System.Drawing.Size(500, 39);
             this.txtSearch.TabIndex = 10;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -346,27 +348,6 @@ namespace GUI_QLBanHang
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên hàng:";
             // 
-            // btnShowAll
-            // 
-            this.btnShowAll.Animated = true;
-            this.btnShowAll.BackColor = System.Drawing.Color.Transparent;
-            this.btnShowAll.BorderRadius = 8;
-            this.btnShowAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowAll.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnShowAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnShowAll.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnShowAll.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnShowAll.ForeColor = System.Drawing.Color.White;
-            this.btnShowAll.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
-            this.btnShowAll.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.btnShowAll.Location = new System.Drawing.Point(683, 290);
-            this.btnShowAll.Name = "btnShowAll";
-            this.btnShowAll.Size = new System.Drawing.Size(216, 45);
-            this.btnShowAll.TabIndex = 12;
-            this.btnShowAll.Text = "Hiện tất cả";
-            this.btnShowAll.UseTransparentBackground = true;
-            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
-            // 
             // dataGridViewHang
             // 
             this.dataGridViewHang.AllowUserToAddRows = false;
@@ -401,7 +382,7 @@ namespace GUI_QLBanHang
             this.dataGridViewHang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewHang.EnableHeadersVisualStyles = false;
             this.dataGridViewHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.dataGridViewHang.Location = new System.Drawing.Point(0, 341);
+            this.dataGridViewHang.Location = new System.Drawing.Point(0, 347);
             this.dataGridViewHang.Name = "dataGridViewHang";
             this.dataGridViewHang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridViewHang.RowHeadersVisible = false;
@@ -411,7 +392,7 @@ namespace GUI_QLBanHang
             this.dataGridViewHang.RowTemplate.DividerHeight = 2;
             this.dataGridViewHang.RowTemplate.Height = 60;
             this.dataGridViewHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHang.Size = new System.Drawing.Size(913, 278);
+            this.dataGridViewHang.Size = new System.Drawing.Size(913, 272);
             this.dataGridViewHang.TabIndex = 20;
             this.dataGridViewHang.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
             this.dataGridViewHang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
@@ -450,9 +431,9 @@ namespace GUI_QLBanHang
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnThem.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.btnThem.Location = new System.Drawing.Point(17, 238);
+            this.btnThem.Location = new System.Drawing.Point(37, 238);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(216, 45);
+            this.btnThem.Size = new System.Drawing.Size(135, 45);
             this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseTransparentBackground = true;
@@ -471,9 +452,9 @@ namespace GUI_QLBanHang
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnXoa.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.btnXoa.Location = new System.Drawing.Point(239, 238);
+            this.btnXoa.Location = new System.Drawing.Point(379, 238);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(216, 45);
+            this.btnXoa.Size = new System.Drawing.Size(135, 45);
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseTransparentBackground = true;
@@ -493,9 +474,9 @@ namespace GUI_QLBanHang
             this.btnSua.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnSua.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.btnSua.ImageSize = new System.Drawing.Size(20, 2);
-            this.btnSua.Location = new System.Drawing.Point(461, 238);
+            this.btnSua.Location = new System.Drawing.Point(208, 238);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(216, 45);
+            this.btnSua.Size = new System.Drawing.Size(135, 45);
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseTransparentBackground = true;
@@ -514,9 +495,9 @@ namespace GUI_QLBanHang
             this.btnBoQua.ForeColor = System.Drawing.Color.White;
             this.btnBoQua.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnBoQua.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.btnBoQua.Location = new System.Drawing.Point(683, 238);
+            this.btnBoQua.Location = new System.Drawing.Point(554, 238);
             this.btnBoQua.Name = "btnBoQua";
-            this.btnBoQua.Size = new System.Drawing.Size(216, 45);
+            this.btnBoQua.Size = new System.Drawing.Size(135, 45);
             this.btnBoQua.TabIndex = 9;
             this.btnBoQua.Text = "Huỷ";
             this.btnBoQua.UseTransparentBackground = true;
@@ -536,23 +517,66 @@ namespace GUI_QLBanHang
             this.btnStatistic.ForeColor = System.Drawing.Color.White;
             this.btnStatistic.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnStatistic.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.btnStatistic.Location = new System.Drawing.Point(461, 290);
+            this.btnStatistic.Location = new System.Drawing.Point(736, 238);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(216, 45);
+            this.btnStatistic.Size = new System.Drawing.Size(135, 45);
             this.btnStatistic.TabIndex = 21;
             this.btnStatistic.Text = "Thống kê";
             this.btnStatistic.UseTransparentBackground = true;
             this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
+            // 
+            // btnImportExcel
+            // 
+            this.btnImportExcel.Animated = true;
+            this.btnImportExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportExcel.BorderRadius = 8;
+            this.btnImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportExcel.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnImportExcel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnImportExcel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnImportExcel.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnImportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnImportExcel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
+            this.btnImportExcel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnImportExcel.Location = new System.Drawing.Point(554, 296);
+            this.btnImportExcel.Name = "btnImportExcel";
+            this.btnImportExcel.Size = new System.Drawing.Size(135, 45);
+            this.btnImportExcel.TabIndex = 22;
+            this.btnImportExcel.Text = "Nhập Excel";
+            this.btnImportExcel.UseTransparentBackground = true;
+            this.btnImportExcel.Click += new System.EventHandler(this.btnImportExcel_Click);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Animated = true;
+            this.btnExportExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportExcel.BorderRadius = 8;
+            this.btnExportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportExcel.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnExportExcel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnExportExcel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportExcel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
+            this.btnExportExcel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnExportExcel.Location = new System.Drawing.Point(736, 296);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(135, 45);
+            this.btnExportExcel.TabIndex = 23;
+            this.btnExportExcel.Text = "Xuất Excel";
+            this.btnExportExcel.UseTransparentBackground = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // QL_Hang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.Controls.Add(this.btnExportExcel);
+            this.Controls.Add(this.btnImportExcel);
             this.Controls.Add(this.btnStatistic);
             this.Controls.Add(this.dataGridViewHang);
             this.Controls.Add(this.btnBoQua);
-            this.Controls.Add(this.btnShowAll);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnXoa);
@@ -585,7 +609,6 @@ namespace GUI_QLBanHang
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pcbSanPham;
-        private Guna.UI2.WinForms.Guna2GradientButton btnShowAll;
         private Guna.UI2.WinForms.Guna2GradientButton btnMoHinh;
         private System.Windows.Forms.TextBox txtHinh;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridViewHang;
@@ -596,5 +619,7 @@ namespace GUI_QLBanHang
         private Guna.UI2.WinForms.Guna2GradientButton btnBoQua;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientButton btnStatistic;
+        private Guna.UI2.WinForms.Guna2GradientButton btnImportExcel;
+        private Guna.UI2.WinForms.Guna2GradientButton btnExportExcel;
     }
 }

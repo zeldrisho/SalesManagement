@@ -51,7 +51,6 @@ namespace GUI_QLBanHang
             this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnThem = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnShowAll = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dataGridViewNhanVien = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.groupBox1.SuspendLayout();
@@ -386,28 +385,6 @@ namespace GUI_QLBanHang
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // btnShowAll
-            // 
-            this.btnShowAll.Animated = true;
-            this.btnShowAll.BackColor = System.Drawing.Color.Transparent;
-            this.btnShowAll.BorderRadius = 8;
-            this.btnShowAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowAll.CustomImages.Image = global::GUI_QLBanHang.Properties.Resources.showall;
-            this.btnShowAll.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnShowAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnShowAll.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnShowAll.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnShowAll.ForeColor = System.Drawing.Color.White;
-            this.btnShowAll.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
-            this.btnShowAll.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.btnShowAll.Location = new System.Drawing.Point(683, 224);
-            this.btnShowAll.Name = "btnShowAll";
-            this.btnShowAll.Size = new System.Drawing.Size(217, 45);
-            this.btnShowAll.TabIndex = 2;
-            this.btnShowAll.Text = "Hiện tất cả";
-            this.btnShowAll.UseTransparentBackground = true;
-            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
-            // 
             // dataGridViewNhanVien
             // 
             this.dataGridViewNhanVien.AllowUserToAddRows = false;
@@ -493,7 +470,6 @@ namespace GUI_QLBanHang
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dataGridViewNhanVien);
-            this.Controls.Add(this.btnShowAll);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtSearch);
             this.Name = "QL_NhanVien";
@@ -526,7 +502,6 @@ namespace GUI_QLBanHang
         private Guna.UI2.WinForms.Guna2GradientButton btnXoa;
         private Guna.UI2.WinForms.Guna2GradientButton btnThem;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2GradientButton btnShowAll;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2RadioButton rdoNgungHoatDong;
         private Guna.UI2.WinForms.Guna2RadioButton rdoHoatDong;

@@ -3,8 +3,11 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using OfficeOpenXml;
+using Excel = Microsoft.Office.Interop.Excel;
 using DTO_QLBanHang;
 using BUS_QLBanHang;
+using System.Collections.Generic;
 
 namespace GUI_QLBanHang
 {
@@ -300,6 +303,102 @@ namespace GUI_QLBanHang
         {
             frmProductReport frmProductReport = new frmProductReport();
             frmProductReport.ShowDialog();
+        }
+
+        private void ExportExcel(string path)
+        {
+            Excel.Application application = new Excel.Application();
+            application.Application.Workbooks.Add(Type.Missing);
+
+            // Lỗi cột image
+            //for (int i = 0; i < dataGridViewHang.Columns.Count; i++)
+            //{
+            //    application.Cells[1, i + 1] = dataGridViewHang.Columns[i].HeaderText;
+            //}
+            application.Cells[1, 1] = dataGridViewHang.Columns[0].HeaderText;
+            application.Cells[1, 2] = dataGridViewHang.Columns[1].HeaderText;
+            application.Cells[1, 3] = dataGridViewHang.Columns[2].HeaderText;
+            application.Cells[1, 4] = dataGridViewHang.Columns[3].HeaderText;
+            application.Cells[1, 5] = dataGridViewHang.Columns[4].HeaderText;
+            application.Cells[1, 6] = dataGridViewHang.Columns[6].HeaderText;
+
+            for (int i = 0; i < dataGridViewHang.Rows.Count; i++)
+            {
+                //for (int j = 0; j < dataGridViewHang.Columns.Count; j++)
+                //{
+                //    application.Cells[i + 2, j + 1] = dataGridViewHang.Rows[i].Cells[j].Value;
+                //}
+                application.Cells[i + 2, 1] = dataGridViewHang.Rows[i].Cells[0].Value;
+                application.Cells[i + 2, 2] = dataGridViewHang.Rows[i].Cells[1].Value;
+                application.Cells[i + 2, 3] = dataGridViewHang.Rows[i].Cells[2].Value;
+                application.Cells[i + 2, 4] = dataGridViewHang.Rows[i].Cells[3].Value;
+                application.Cells[i + 2, 5] = dataGridViewHang.Rows[i].Cells[4].Value;
+                application.Cells[i + 2, 6] = dataGridViewHang.Rows[i].Cells[6].Value;
+            }
+            application.Columns.AutoFit();
+            application.ActiveWorkbook.SaveCopyAs(path);
+            application.ActiveWorkbook.Saved = true;
+        }
+
+        private void ImportExcel(string path)
+        {
+            using (ExcelPackage excelPackage = new ExcelPackage(new FileInfo(path)))
+            {
+                ExcelWorksheet sheet = excelPackage.Workbook.Worksheets[0];
+                DataTable data = new DataTable();
+                for (int i = sheet.Dimension.Start.Column; i <= sheet.Dimension.End.Column; i++)
+                {
+                    data.Columns.Add(sheet.Cells[1, i].Value.ToString());
+                }
+                for (int i = sheet.Dimension.Start.Row + 1; i <= sheet.Dimension.End.Row; i++)
+                {
+                    List<string> listRows = new List<string>();
+                    for (int j = sheet.Dimension.Start.Column; j <= sheet.Dimension.End.Column; j++)
+                    {
+                        listRows.Add(sheet.Cells[i, j].Value.ToString());
+                    }
+                }
+                dataGridViewHang.DataSource = data;
+                showHang();
+            }
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Export Excel";
+            saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*xls)|*.xls";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    ExportExcel(saveFileDialog.FileName);
+                    MessageBox.Show("Xuất file thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xuất file thành công!\n" + ex.Message);
+                }
+            }
+        }
+
+        private void btnImportExcel_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Import Excel";
+            openFileDialog.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*xls)|*.xls";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    ImportExcel(openFileDialog.FileName);
+                    MessageBox.Show("Nhập file thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Nhập file thành công!\n" + ex.Message);
+                }
+            }
         }
     }
 }
