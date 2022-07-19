@@ -1,9 +1,0 @@
-PHẦN MỀM QUẢN LÝ BÁN HÀNG
-
-- Đồ án môn Lập trình trên Windows:
-+ Hồ Sỹ Gia Trung - 2024801030101
-
-- Đồ án cơ sở ngành - Nhóm 9:
-+ Hồ Sỹ Gia Trung - 2024801030101
-+ Trần Minh Phát - 2024801030232
-+ Nguyễn Minh Chiến - 2024801030179
