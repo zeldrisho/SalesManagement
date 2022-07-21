@@ -137,6 +137,7 @@
             this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAccount.TextOffset = new System.Drawing.Point(50, 0);
             this.btnAccount.UseTransparentBackground = true;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnBill
             // 

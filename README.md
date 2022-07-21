@@ -2,11 +2,10 @@
 
 ## Công nghệ được sử dụng
 - Visual Studio 2022, SSMS 18
-- SQL Server 2019 Express, Azure SQL Database
+- SQL Server 2019 Express
 - .NET Framework 4.7.2
 - ADO.NET
 - Guna.UI2.WinForms
-- Advanced Installer
 
 ## Hướng dẫn
 - Dùng SSMS run query SqlScripts/generated-script.sql
@@ -22,14 +21,6 @@
 - Nhân viên
   + Email: tranminphat@gmail.com
   + Password: mknv1
-
-## Remote database
-- Tạo tài khoản: https://azure.microsoft.com/en-us/free
-- Deloy database: https://www.progress.com/documentation/sitefinity-cms/deploy-the-database-to-azure-sql
-- https://portal.azure.com -> Overview -> Set server firewall -> Add a firewall rule
-  + Start: 0.0.0.0
-  + End: 255.255.255.255
-- https://portal.azure.com -> Connection strings -> Copy & edit password
 
 ## Nguồn tham khảo
 - https://github.com/gtechsltn/QLBanHang

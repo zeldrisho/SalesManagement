@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO_Bill.cs" />
+    <Compile Include="DTO_BillInfo.cs" />
     <Compile Include="DTO_Customer.cs" />
     <Compile Include="DTO_Employee.cs" />
     <Compile Include="DTO_Product.cs" />

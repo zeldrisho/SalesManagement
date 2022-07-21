@@ -35,7 +35,6 @@ namespace GUI
         private void SetValue(bool param, bool isLoad)
         {
             txtId.Text = null;
-            txtId.Enabled = !param;
 
             txtName.Text = null;
             txtQuantity.Text = null;
@@ -92,7 +91,7 @@ namespace GUI
             gvProduct.Columns[5].HeaderText = "Hình ảnh";
             gvProduct.Columns[6].HeaderText = "Ghi chú";
             foreach (DataGridViewColumn item in gvProduct.Columns)
-                item.DividerWidth = 2;
+                item.DividerWidth = 1;
 
             DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
             imgCol = (DataGridViewImageColumn)gvProduct.Columns[5];

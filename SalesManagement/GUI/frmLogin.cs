@@ -60,18 +60,22 @@ namespace GUI
 
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
-            //if (txtEmail.Text != "" && busEmployee.IsExistEmail(txtEmail.Text))
-            //{
-            //    string password = busEmployee.GetRandomPassword();
-            //    if (busEmployee.UpdatePassword(txtEmail.Text, password))
-            //    {
-            //        SendMail load = new SendMail(txtEmail.Text, password, true);
-            //        load.ShowDialog();
-            //        MessageBox.Show(load.getResult, "Thông báo");
-            //    }
-            //    else
-            //        MessageBox.Show("Không thực hiện được", "Thông báo");
-            //}
+            if (txtEmail.Text != "")
+            {
+                busEmployee = new BUS_Employee();
+                if (busEmployee.IsExistEmail(txtEmail.Text))
+                {
+                    string password = busEmployee.GetRandomPassword();
+                    if (busEmployee.UpdatePassword(txtEmail.Text, password))
+                    {
+                        SendMail loader = new SendMail(txtEmail.Text, password, true);
+                        loader.ShowDialog();
+                        MessageBox.Show(loader.Result, "Thông báo");
+                    }
+                    else
+                        MessageBox.Show("Không thực hiện được", "Thông báo");
+                }
+            }
         }
     }
 }

@@ -56,6 +56,10 @@ namespace GUI
             gvCustomer.Columns[1].HeaderText = "Tên khách hàng";
             gvCustomer.Columns[2].HeaderText = "Địa chỉ";
             gvCustomer.Columns[3].HeaderText = "Số điện thoại";
+            foreach (DataGridViewColumn item in gvCustomer.Columns)
+            {
+                item.DividerWidth = 1;
+            }
         }
 
         private void MsgBox(string message, bool isError = false)

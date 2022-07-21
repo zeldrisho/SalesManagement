@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,11 @@ namespace BUS
         public DataTable SearchCustomer(string name)
         {
             return dalCustomer.SearchCustomer(name);
+        }
+
+        public string[] ListCustomerName()
+        {
+            return dalCustomer.ListCustomerName();
         }
     }
 }

@@ -115,7 +115,7 @@ namespace GUI
                         LoadGridView();
                         SendMail sendMail = new SendMail(dtoEmployee.Email, password);
                         sendMail.ShowDialog();
-                        MsgBox(sendMail.getResult);
+                        MsgBox(sendMail.Result);
                     }
                     else
                         MsgBox("Không thêm nhân viên được!", true);

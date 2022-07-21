@@ -1,7 +1,4 @@
-﻿--USE master
---GO
-
---DROP DATABASE SalesManagement
+﻿--DROP DATABASE SalesManagement
 --GO
 
 CREATE DATABASE SalesManagement
@@ -12,16 +9,16 @@ GO
 
 CREATE TABLE tblCustomer
 (
-	Id INT IDENTITY PRIMARY KEY,
+	Id INT IDENTITY(300,1) PRIMARY KEY,
 	Name NVARCHAR(50) NOT NULL,
 	Address NVARCHAR(50) NOT NULL,
-	PhoneNumber NVARCHAR(50) NOT NULL
+	PhoneNumber NVARCHAR(50) NOT NULL,
 )
 GO
 
 CREATE TABLE tblProduct
 (
-	Id INT IDENTITY PRIMARY KEY,
+	Id INT IDENTITY(200,1) PRIMARY KEY,
 	Name NVARCHAR(50) NOT NULL,
 	Quantity INT NOT NULL,
 	ImportUnitPrice FLOAT NOT NULL,
@@ -33,7 +30,7 @@ GO
 
 CREATE TABLE tblEmployee
 (
-	Id INT IDENTITY PRIMARY KEY,
+	Id INT IDENTITY(100, 1) PRIMARY KEY,
 	Name NVARCHAR(50) NOT NULL,
 	Address NVARCHAR(50) NOT NULL,
 	PhoneNumber NVARCHAR(50) NOT NULL,
@@ -46,11 +43,10 @@ GO
 
 CREATE TABLE tblBill
 (
-	Id INT IDENTITY PRIMARY KEY,
+	Id INT IDENTITY(400, 1) PRIMARY KEY,
 	EmployeeId INT NOT NULL,
-	SaleDate DATETIME NOT NULL,
 	CustomerId INT NOT NULL,
-	TotalPrice FLOAT NOT NULL,
+	DateOfPayment DATETIME DEFAULT SYSDATETIME(),
 	FOREIGN KEY (EmployeeId) REFERENCES dbo.tblEmployee(Id),
 	FOREIGN KEY (CustomerId) REFERENCES dbo.tblCustomer(Id)
 )
@@ -62,8 +58,7 @@ CREATE TABLE tblBillInfo
 	ProductId INT NOT NULL,
 	Quantity INT NOT NULL,
 	UnitPrice FLOAT NOT NULL,
-	Discount FLOAT NOT NULL,
-	FinalPrice FLOAT NOT NULL,
+	TotalPrice FLOAT NOT NULL,
 	PRIMARY KEY (BillId, ProductId),
 	FOREIGN KEY (BillId) REFERENCES dbo.tblBill(Id),
 	FOREIGN KEY (ProductId) REFERENCES dbo.tblProduct(Id)
@@ -191,7 +186,7 @@ SELECT Role FROM dbo.tblEmployee WHERE Email = @email
 END
 GO
 
-CREATE PROC CheckEmailExist
+CREATE PROC IsExistEmail
 @email NVARCHAR(50)
 AS BEGIN
 DECLARE @result BIT
@@ -264,9 +259,9 @@ WHERE Email = @email
 END
 GO
 
-CREATE PROC GetEmployeeInfo
-@id INT
+CREATE PROC ListCustomerName
 AS BEGIN
-SELECT * FROM dbo.tblEmployee WHERE Id = @id
+SELECT CONVERT(NVARCHAR(50), Id) + ' | ' + Name FROM dbo.tblCustomer
 END
 GO
+

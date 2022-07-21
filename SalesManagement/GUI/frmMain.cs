@@ -18,12 +18,7 @@ namespace GUI
         frmProduct fProduct = new frmProduct();
         frmCustomer fCustomer = new frmCustomer();
         frmBill fBill = new frmBill();
-        frmAccount fAccount = new frmAccount();
-
-        public frmMain()
-        {
-            InitializeComponent();
-        }
+        frmAccount fAccount;
 
         public frmMain(string email)
         {
@@ -39,6 +34,7 @@ namespace GUI
                 fEmployee.Dock = DockStyle.Fill;
                 pnlBody.Controls.Add(fEmployee);
                 fEmployee.Show();
+                fAccount = new frmAccount(email);
             }
         }
 
@@ -86,6 +82,15 @@ namespace GUI
             pnlBody.Controls.Add(fBill);
             fBill.Dock = DockStyle.Fill;
             fBill.Show();
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            pnlBody.Controls.Clear();
+            fAccount.TopLevel = false;
+            pnlBody.Controls.Add(fAccount);
+            fAccount.Dock = DockStyle.Fill;
+            fAccount.Show();
         }
     }
 }

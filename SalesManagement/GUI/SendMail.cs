@@ -14,16 +14,10 @@ namespace GUI
 {
     public partial class SendMail : Form
     {
-        private string result = "";
-        public string getResult { get { return result; } }
+        private string result;
         private string email; // email cần gửi tin
         private string password; // mật khẩu đăng nhập phần mềm
         private bool isUpdate;
-
-        public SendMail()
-        {
-            InitializeComponent();
-        }
 
         public SendMail(string email, string pass, bool isUpdate = false)
         {
@@ -32,23 +26,26 @@ namespace GUI
             this.password = pass;
             this.isUpdate = isUpdate;
         }
+        
+        public string Result { get => result; set => result = value; }
 
         private void SendMail_Load(object sender, EventArgs e)
         {
-            Thread r = new Thread(Send);
-            r.IsBackground = true;
-            r.Start();
+            Thread thread = new Thread(Send);
+            thread.IsBackground = true;
+            thread.Start();
         }
+
         private void Send()
         {
-            // Tự thay email và password của tài khoản gmail dùng để gửi
-            // Nhớ cho phép login ứng dụng kém an toàn (nếu tìm không thấy thì dùng mail edu)
+            // Thay email và password của tài khoản gmail dùng để gửi
+            // Cho phép login ứng dụng kém an toàn (nếu tìm không thấy thì dùng mail edu)
             string loginEmail = "2024801030101@student.tdmu.edu.vn";
             string loginPassword = "Trung@tftmobile";
             // Tạo đối tượng để gửi mail truyền email, pass để login
             BUS_Mail mail = new BUS_Mail(loginEmail, loginPassword);
             // Nếu là cập nhật mật khẩu thì true, còn nếu là mật khẩu thì false
-            result = mail.SendMail(email, password, isUpdate);
+            Result = mail.SendMail(email, password, isUpdate);
             pcbLoader.Invoke(new Action(() => Close()));
         }
     }

@@ -133,5 +133,28 @@ namespace DAL
                 _conn.Close();
             }
         }
+
+        public string[] ListCustomerName()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "ListCustomerName";
+                List<string> list = new List<string>();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    list.Add(reader[0].ToString());
+                }
+                return list.ToArray();
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }
