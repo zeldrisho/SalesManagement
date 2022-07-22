@@ -138,5 +138,64 @@ namespace DAL
                 _conn.Close();
             }
         }
+
+        public string[] ListProductNameQuantity()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "ListProductNameQuantity";
+                List<string> list = new List<string>();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    list.Add(reader[0].ToString());
+                }
+                return list.ToArray();
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public double GetUnitPrice(string name)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "GetUnitPrice";
+                cmd.Parameters.AddWithValue("name", name);
+                return Convert.ToDouble(cmd.ExecuteScalar());
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public int GetProductId(string name)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "GetProductId";
+                cmd.Parameters.AddWithValue("name", name);
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }

@@ -37,5 +37,20 @@ namespace BUS
         {
             return dalProduct.SearchProduct(name);
         }
+
+        public string[] ListProductNameQuantity()
+        {
+            return dalProduct.ListProductNameQuantity();
+        }
+
+        public double GetUnitPrice(string name)
+        {
+            return dalProduct.GetUnitPrice(name);
+        }
+
+        public int GetProductId(string name)
+        {
+            return dalProduct.GetProductId(name);
+        }
     }
 }

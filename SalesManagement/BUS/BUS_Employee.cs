@@ -83,9 +83,9 @@ namespace BUS
             return dalEmployee.SearchEmployee(name);
         }
 
-        public DataTable GetEmployeeInfo(int id)
+        public string GetEmployeeIdName(string email)
         {
-            return dalEmployee.GetEmployeeInfo(id);
+            return dalEmployee.GetEmployeeIdName(email);
         }
 
         public string GetRandomPassword()

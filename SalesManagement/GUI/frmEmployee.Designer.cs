@@ -236,7 +236,7 @@
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Nhập tên để tìm kiếm";
+            this.txtSearch.PlaceholderText = "Nhập tên NV để tìm kiếm";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(252, 36);
             this.txtSearch.TabIndex = 4;
@@ -580,7 +580,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEmployee";
-            this.Text = "Quản lý nhân viên";
+            this.Text = "Nhân viên";
             this.Load += new System.EventHandler(this.frmEmployee_Load);
             this.Shown += new System.EventHandler(this.frmEmployee_Shown);
             this.guna2Panel1.ResumeLayout(false);

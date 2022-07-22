@@ -39,9 +39,9 @@ namespace BUS
             return dalCustomer.SearchCustomer(name);
         }
 
-        public string[] ListCustomerName()
+        public string[] ListCustomerIdName()
         {
-            return dalCustomer.ListCustomerName();
+            return dalCustomer.ListCustomerIdName();
         }
     }
 }

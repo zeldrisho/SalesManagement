@@ -17,8 +17,8 @@ namespace GUI
         frmEmployee fEmployee = new frmEmployee();
         frmProduct fProduct = new frmProduct();
         frmCustomer fCustomer = new frmCustomer();
-        frmBill fBill = new frmBill();
         frmAccount fAccount;
+        frmBill fBill;
 
         public frmMain(string email)
         {
@@ -26,6 +26,11 @@ namespace GUI
             if (!busEmployee.GetEmployeeRole(email))
             {
                 btnEmployee.Visible = false;
+                btnProduct.Checked = true;
+                fProduct.TopLevel = false;
+                fProduct.Dock = DockStyle.Fill;
+                pnlBody.Controls.Add(fProduct);
+                fProduct.Show();
             }
             else
             {
@@ -34,8 +39,9 @@ namespace GUI
                 fEmployee.Dock = DockStyle.Fill;
                 pnlBody.Controls.Add(fEmployee);
                 fEmployee.Show();
-                fAccount = new frmAccount(email);
             }
+            fAccount = new frmAccount(email);
+            fBill = new frmBill(email);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

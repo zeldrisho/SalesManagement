@@ -1,5 +1,5 @@
-﻿--DROP DATABASE SalesManagement
---GO
+﻿USE master
+GO
 
 CREATE DATABASE SalesManagement
 GO
@@ -9,7 +9,7 @@ GO
 
 CREATE TABLE tblCustomer
 (
-	Id INT IDENTITY(300,1) PRIMARY KEY,
+	Id INT IDENTITY(300, 1) PRIMARY KEY,
 	Name NVARCHAR(50) NOT NULL,
 	Address NVARCHAR(50) NOT NULL,
 	PhoneNumber NVARCHAR(50) NOT NULL,
@@ -18,7 +18,7 @@ GO
 
 CREATE TABLE tblProduct
 (
-	Id INT IDENTITY(200,1) PRIMARY KEY,
+	Id INT IDENTITY(200, 1) PRIMARY KEY,
 	Name NVARCHAR(50) NOT NULL,
 	Quantity INT NOT NULL,
 	ImportUnitPrice FLOAT NOT NULL,
@@ -47,21 +47,18 @@ CREATE TABLE tblBill
 	EmployeeId INT NOT NULL,
 	CustomerId INT NOT NULL,
 	DateOfPayment DATETIME DEFAULT SYSDATETIME(),
+	TotalPrice FLOAT NOT NULL,
 	FOREIGN KEY (EmployeeId) REFERENCES dbo.tblEmployee(Id),
-	FOREIGN KEY (CustomerId) REFERENCES dbo.tblCustomer(Id)
+	FOREIGN KEY (CustomerId) REFERENCES dbo.tblCustomer(Id),
 )
 GO
- 
+
 CREATE TABLE tblBillInfo
 (
-	BillId INT NOT NULL,
-	ProductId INT NOT NULL,
+	ProductId INT NOT NULL PRIMARY KEY,
 	Quantity INT NOT NULL,
-	UnitPrice FLOAT NOT NULL,
-	TotalPrice FLOAT NOT NULL,
-	PRIMARY KEY (BillId, ProductId),
-	FOREIGN KEY (BillId) REFERENCES dbo.tblBill(Id),
-	FOREIGN KEY (ProductId) REFERENCES dbo.tblProduct(Id)
+	Price FLOAT NOT NULL,
+	FOREIGN KEY (ProductId) REFERENCES dbo.tblProduct(Id),
 )
 GO
 
@@ -114,6 +111,20 @@ GO
 CREATE PROC ListOfEmployees
 AS BEGIN
 SELECT Id, Name, Address, PhoneNumber, Email, Role, Status FROM dbo.tblEmployee
+END
+GO
+
+CREATE PROC ListBillInfo
+AS BEGIN
+SELECT ProductId, p.Name, b.Quantity, Price FROM dbo.tblBillInfo b, dbo.tblProduct p
+WHERE ProductId = p.Id
+END
+GO
+
+CREATE PROC ListOfBills
+AS BEGIN
+SELECT b.Id, c.Name, DateOfPayment, TotalPrice FROM dbo.tblBill b, dbo.tblCustomer c
+WHERE b.CustomerId = c.Id
 END
 GO
 
@@ -179,6 +190,27 @@ INSERT INTO dbo.tblEmployee VALUES
 END
 GO
 
+CREATE PROC InsertBillInfo
+@productId INT, @quantity INT, @unitPrice FLOAT  
+AS BEGIN
+DECLARE @price FLOAT = @quantity * @unitPrice
+INSERT INTO dbo.tblBillInfo VALUES
+(@productId, @quantity, @price)
+END
+GO
+
+CREATE PROC InsertBill
+@employeeId INT, @customerId INT, @totalPrice FLOAT
+AS BEGIN
+ALTER TABLE dbo.tblBill NOCHECK CONSTRAINT ALL
+DELETE FROM dbo.tblBillInfo
+ALTER TABLE dbo.tblBill CHECK CONSTRAINT ALL
+
+INSERT INTO dbo.tblBill VALUES
+(@employeeId, @customerId, DEFAULT, @totalPrice)
+END
+GO
+
 CREATE PROC GetEmployeeRole
 @email NVARCHAR(50)
 AS BEGIN
@@ -209,6 +241,14 @@ CREATE PROC SearchCustomer
 @name NVARCHAR(50)
 AS BEGIN
 SELECT * FROM dbo.tblCustomer WHERE Name LIKE '%' + @name + '%'
+END
+GO
+
+CREATE PROC SearchCustomerInBill
+@name NVARCHAR(50)
+AS BEGIN
+SELECT b.Id, c.Name, DateOfPayment, TotalPrice FROM dbo.tblBill b, dbo.tblCustomer c
+WHERE b.CustomerId = c.Id AND c.Name LIKE '%' + @name + '%'
 END
 GO
 
@@ -259,9 +299,41 @@ WHERE Email = @email
 END
 GO
 
-CREATE PROC ListCustomerName
+CREATE PROC ListCustomerIdName
 AS BEGIN
 SELECT CONVERT(NVARCHAR(50), Id) + ' | ' + Name FROM dbo.tblCustomer
 END
 GO
 
+CREATE PROC ListProductNameQuantity
+AS BEGIN
+SELECT Name + ' | ' + CONVERT(NVARCHAR(50), Quantity) FROM dbo.tblProduct
+END
+GO
+
+CREATE PROC GetUnitPrice
+@name NVARCHAR(50)
+AS BEGIN
+SELECT UnitPrice FROM dbo.tblProduct WHERE Name = @name
+END
+GO
+
+CREATE PROC GetEmployeeIdName
+@email NVARCHAR(50)
+AS BEGIN
+SELECT CONVERT(NVARCHAR(50), Id) + ' | ' + Name FROM dbo.tblEmployee WHERE Email = @email
+END
+GO
+
+CREATE PROC GetProductId
+@name NVARCHAR(50)
+AS BEGIN
+SELECT Id FROM dbo.tblProduct WHERE Name = @name
+END
+GO
+
+CREATE PROC GetTotalPrice
+AS BEGIN
+SELECT SUM(Price) from dbo.tblBillInfo
+END
+GO

@@ -8,7 +8,7 @@
 - Guna.UI2.WinForms
 
 ## Hướng dẫn
-- Dùng SSMS run query SqlScripts/generated-script.sql
+- Dùng SSMS run query SqlScripts/pure-script.sql
 - Dùng Visual Studio mở SalesManagement/SalesManagement.sln
 - Thay đổi connection string trong App.config cho phù hợp
 - Register Guna Framework để edit form
@@ -27,3 +27,4 @@
 - https://www.youtube.com/channel/UCwI8AQlBewsdxbyk2r4n9CQ
 - https://www.youtube.com/c/KTeam
 - https://www.youtube.com/channel/UCljqNyim6NFh6ZWj1qXXpSg
+- https://www.youtube.com/channel/UClM1M6b1ij-Vm8lG4Q3l68w

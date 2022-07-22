@@ -8,26 +8,23 @@ namespace DTO
 {
     public class DTO_Bill
     {
-        private int id;
         private int employeeId;
         private int customerId;
-        private DateTime dateOfPayment;
+        private double totalPrice;
 
         public DTO_Bill()
         {
         }
 
-        public DTO_Bill(int id, int employeeId, int customerId, DateTime dateOfPayment)
+        public DTO_Bill(int employeeId, int customerId, double totalPrice)
         {
-            this.Id = id;
             this.EmployeeId = employeeId;
             this.CustomerId = customerId;
-            this.DateOfPayment = dateOfPayment;
+            this.TotalPrice = totalPrice;
         }
 
-        public int Id { get => id; set => id = value; }
         public int EmployeeId { get => employeeId; set => employeeId = value; }
         public int CustomerId { get => customerId; set => customerId = value; }
-        public DateTime DateOfPayment { get => dateOfPayment; set => dateOfPayment = value; }
+        public double TotalPrice { get => totalPrice; set => totalPrice = value; }
     }
 }

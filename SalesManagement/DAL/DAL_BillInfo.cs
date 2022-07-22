@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class DAL_Bill : DbConnect
+    public class DAL_BillInfo : DbConnect
     {
-        public DataTable ListOfBills()
+        public DataTable ListBillInfo()
         {
             try
             {
@@ -19,7 +19,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "ListOfBills";
+                cmd.CommandText = "ListBillInfo";
                 DataTable data = new DataTable();
                 data.Load(cmd.ExecuteReader());
                 return data;
@@ -30,18 +30,19 @@ namespace DAL
             }
         }
 
-        public bool InsertBill(DTO_Bill bill)
+        public bool InsertBillInfo(DTO_BillInfo billInfo)
         {
+
             try
             {
                 _conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "InsertBill";
-                cmd.Parameters.AddWithValue("employeeId", bill.EmployeeId);
-                cmd.Parameters.AddWithValue("customerId", bill.CustomerId);
-                cmd.Parameters.AddWithValue("totalPrice", bill.TotalPrice);
+                cmd.CommandText = "InsertBillInfo";
+                cmd.Parameters.AddWithValue("productId", billInfo.ProductId);
+                cmd.Parameters.AddWithValue("quantity", billInfo.Quantity);
+                cmd.Parameters.AddWithValue("unitPrice", billInfo.UnitPrice);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
                 else
@@ -57,8 +58,8 @@ namespace DAL
             }
             return false;
         }
-        
-        public DataTable SearchCustomerInBill(string name)
+
+        public double GetTotalPrice()
         {
             try
             {
@@ -66,11 +67,8 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SearchCustomerInBill";
-                cmd.Parameters.AddWithValue("name", name);
-                DataTable data = new DataTable();
-                data.Load(cmd.ExecuteReader());
-                return data;
+                cmd.CommandText = "GetTotalPrice";
+                return Convert.ToDouble(cmd.ExecuteScalar());
             }
             finally
             {

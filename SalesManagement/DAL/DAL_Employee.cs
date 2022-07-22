@@ -274,7 +274,7 @@ namespace DAL
             }
         }
 
-        public DataTable GetEmployeeInfo(int id)
+        public string GetEmployeeIdName(string email)
         {
             try
             {
@@ -282,11 +282,9 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "GetEmployeeInfo";
-                cmd.Parameters.AddWithValue("id", id);
-                DataTable data = new DataTable();
-                data.Load(cmd.ExecuteReader());
-                return data;
+                cmd.CommandText = "GetEmployeeIdName";
+                cmd.Parameters.AddWithValue("email", email);
+                return Convert.ToString(cmd.ExecuteScalar());
             }
             finally
             {

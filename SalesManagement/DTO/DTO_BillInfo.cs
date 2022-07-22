@@ -8,29 +8,23 @@ namespace DTO
 {
     public class DTO_BillInfo
     {
-        private int billId;
         private int productId;
         private int quantity;
-        private float unitPrice;
-        private float totalPrice;
+        private double unitPrice;
 
         public DTO_BillInfo()
         {
         }
 
-        public DTO_BillInfo(int billId, int productId, int quantity, float unitPrice, float totalPrice)
+        public DTO_BillInfo(int productId, int quantity, double unitPrice)
         {
-            this.BillId = billId;
             this.ProductId = productId;
             this.Quantity = quantity;
             this.UnitPrice = unitPrice;
-            this.TotalPrice = totalPrice;
         }
 
-        public int BillId { get => billId; set => billId = value; }
         public int ProductId { get => productId; set => productId = value; }
         public int Quantity { get => quantity; set => quantity = value; }
-        public float UnitPrice { get => unitPrice; set => unitPrice = value; }
-        public float TotalPrice { get => totalPrice; set => totalPrice = value; }
+        public double UnitPrice { get => unitPrice; set => unitPrice = value; }
     }
 }

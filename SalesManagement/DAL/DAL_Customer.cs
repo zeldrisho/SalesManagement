@@ -32,7 +32,6 @@ namespace DAL
 
         public bool InsertCustomer(DTO_Customer customer)
         {
-
             try
             {
                 _conn.Open();
@@ -134,7 +133,7 @@ namespace DAL
             }
         }
 
-        public string[] ListCustomerName()
+        public string[] ListCustomerIdName()
         {
             try
             {
@@ -142,7 +141,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "ListCustomerName";
+                cmd.CommandText = "ListCustomerIdName";
                 List<string> list = new List<string>();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
