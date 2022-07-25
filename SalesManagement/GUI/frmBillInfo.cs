@@ -94,7 +94,7 @@ namespace GUI
                     int.Parse(txtQuantity.Text),
                     double.Parse(txtUnitPrice.Text)
                 );
-                if (busBillInfo.InsertBillInfo(dtoBillInfo))
+                if (busBillInfo.InsertBillInfo(dtoBillInfo, int.Parse(txtQuantity.Text)))
                 {
                     gvBillInfo.DataSource = busBillInfo.ListBillInfo();
                     LoadGridView();
@@ -115,6 +115,41 @@ namespace GUI
             LoadData();
             gvBillInfo.DataSource = busBillInfo.ListBillInfo();
             LoadGridView();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int id = busProduct.GetProductId(productName);
+            str = cboProductNameQuantity.SelectedItem.ToString();
+            strlist = str.Split(separator);
+            string quantity = strlist[1].Trim();
+            if (busBillInfo.UpdateProductInBillInfo(id, int.Parse(quantity)))
+            {
+                gvBillInfo.DataSource = busBillInfo.ListBillInfo();
+                LoadGridView();
+                MsgBox("Sửa sản phẩm thành công!");
+            }
+            else
+            {
+                MsgBox("Sửa sản phẩm không được", true);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id = busProduct.GetProductId(productName);
+            if (MessageBox.Show("Bạn có chắc muốn xóa", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                if (busBillInfo.DeleteProductInBillInfo(id))
+                {
+                    MsgBox("Xóa thành công");
+                    LoadData();
+                    gvBillInfo.DataSource = busBillInfo.ListBillInfo();
+                    LoadGridView();
+                }
+                else
+                    MsgBox("Không xóa được", true);
+            }
         }
 
         private void btnPay_Click(object sender, EventArgs e)

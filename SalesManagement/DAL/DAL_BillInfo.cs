@@ -30,7 +30,7 @@ namespace DAL
             }
         }
 
-        public bool InsertBillInfo(DTO_BillInfo billInfo)
+        public bool InsertBillInfo(DTO_BillInfo billInfo, int quantity)
         {
 
             try
@@ -41,7 +41,7 @@ namespace DAL
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "InsertBillInfo";
                 cmd.Parameters.AddWithValue("productId", billInfo.ProductId);
-                cmd.Parameters.AddWithValue("quantity", billInfo.Quantity);
+                cmd.Parameters.AddWithValue("quantity", quantity);
                 cmd.Parameters.AddWithValue("unitPrice", billInfo.UnitPrice);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -74,6 +74,59 @@ namespace DAL
             {
                 _conn.Close();
             }
+        }
+
+        public bool DeleteProductInBillInfo(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "DeleteProductInBillInfo";
+                cmd.Parameters.AddWithValue("id", id);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+        public bool UpdateProductInBillInfo(int id, int quantity)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "UpdateProductInBillInfo";
+                cmd.Parameters.AddWithValue("id", id);
+                cmd.Parameters.AddWithValue("quantity", quantity);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
         }
     }
 }

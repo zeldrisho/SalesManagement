@@ -18,14 +18,24 @@ namespace BUS
             return dalBillInfo.ListBillInfo();
         }
 
-        public bool InsertBillInfo(DTO_BillInfo billInfo)
+        public bool InsertBillInfo(DTO_BillInfo billInfo, int quantity)
         {
-            return dalBillInfo.InsertBillInfo(billInfo);
+            return dalBillInfo.InsertBillInfo(billInfo, quantity);
         }
 
         public double GetTotalPrice()
         {
             return dalBillInfo.GetTotalPrice();
+        }
+
+        public bool DeleteProductInBillInfo(int id)
+        {
+            return dalBillInfo.DeleteProductInBillInfo(id);
+        }
+
+        public bool UpdateProductInBillInfo(int id, int quantity)
+        {
+            return dalBillInfo.UpdateProductInBillInfo(id, quantity);
         }
     }
 }

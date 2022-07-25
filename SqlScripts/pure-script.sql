@@ -147,6 +147,18 @@ SELECT @result
 END
 GO
 
+CREATE PROC DeleteProductInBillInfo
+@id int
+AS BEGIN
+DECLARE @result BIT = 1
+IF EXISTS(SELECT * FROM dbo.tblBillInfo WHERE ProductId = @id)
+	DELETE dbo.tblBillInfo WHERE ProductId = @id
+ELSE
+	SET @result = 0
+SELECT @result
+END
+GO
+
 CREATE PROC DeleteCustomer
 @id INT
 AS BEGIN
@@ -278,6 +290,15 @@ UPDATE dbo.tblProduct
 SET Name = @name, Quantity = @quantity, ImportUnitPrice = @importUnitPrice,
 UnitPrice = @unitPrice, Image = @image, Note = @note
 WHERE Id = @id
+END
+GO
+
+CREATE PROC UpdateProductInBillInfo
+@id int, @quantity int
+AS BEGIN
+UPDATE dbo.tblBillInfo
+SET Quantity = @quantity
+WHERE ProductId = @id
 END
 GO
 

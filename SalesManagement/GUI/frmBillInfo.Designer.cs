@@ -176,6 +176,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(135, 45);
             this.btnUpdate.TabIndex = 37;
             this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // guna2Panel3
             // 
@@ -385,6 +386,7 @@
             this.btnDelete.Size = new System.Drawing.Size(135, 45);
             this.btnDelete.TabIndex = 28;
             this.btnDelete.Text = "Xoá";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtQuantity
             // 
