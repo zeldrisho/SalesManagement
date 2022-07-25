@@ -22,7 +22,6 @@ namespace GUI
         BUS_Bill busBill = new BUS_Bill();
         DTO_BillInfo dtoBillInfo;
         DTO_Bill dtoBill;
-
         private string[] listCustomerIdName, listProductNameQuantity;
         private DateTime dateTime = new DateTime();
         private string productName, email, str;
@@ -75,6 +74,9 @@ namespace GUI
             {
                 item.DividerWidth = 1;
             }
+            gvBillInfo.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvBillInfo.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvBillInfo.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void btnInsert_Click(object sender, EventArgs e)

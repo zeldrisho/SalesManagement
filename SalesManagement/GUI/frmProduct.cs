@@ -15,7 +15,6 @@ namespace GUI
 {
     public partial class frmProduct : Form
     {
-        private string email;
         private string fileAddress;
         private byte[] img;
         BUS_Product busProduct = new BUS_Product();
@@ -24,12 +23,6 @@ namespace GUI
         public frmProduct()
         {
             InitializeComponent();
-        }
-
-        public frmProduct(string email)
-        {
-            InitializeComponent();
-            this.email = email;
         }
 
         private void SetValue(bool param, bool isLoad)
@@ -96,6 +89,11 @@ namespace GUI
             DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
             imgCol = (DataGridViewImageColumn)gvProduct.Columns[5];
             imgCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            
+            gvProduct.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvProduct.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvProduct.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvProduct.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private bool CheckIsNummber(string text)

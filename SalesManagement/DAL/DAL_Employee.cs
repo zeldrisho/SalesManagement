@@ -227,6 +227,34 @@ namespace DAL
             return false;
         }
 
+        public bool UpdateEmployeeAddressPhoneNumber(DTO_Employee employee)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "UpdateEmployeeAddressPhoneNumber";
+                cmd.Parameters.AddWithValue("address", employee.Address);
+                cmd.Parameters.AddWithValue("phoneNumber", employee.PhoneNumber);
+                cmd.Parameters.AddWithValue("email", employee.Email);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
         public bool DeleteEmployee(int id)
         {
             try
@@ -283,6 +311,24 @@ namespace DAL
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "GetEmployeeIdName";
+                cmd.Parameters.AddWithValue("email", email);
+                return Convert.ToString(cmd.ExecuteScalar());
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public string GetEmployeeAddressPhoneNumber(string email)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "GetEmployeeAddressPhoneNumber";
                 cmd.Parameters.AddWithValue("email", email);
                 return Convert.ToString(cmd.ExecuteScalar());
             }

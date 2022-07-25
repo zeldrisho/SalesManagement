@@ -47,6 +47,8 @@ namespace GUI
             {
                 item.DividerWidth = 1;
             }
+            gvEmployee.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvEmployee.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void SetValue(bool param, bool isLoad)

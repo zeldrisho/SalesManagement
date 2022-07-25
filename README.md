@@ -1,4 +1,5 @@
 # Phần mềm quản lý bán hàng
+[![wakatime](https://wakatime.com/badge/user/91c0db03-b05f-4786-b6b3-af5795e2f1df/project/37c4204d-3e81-4743-be1e-9025d49f392b.svg)](https://wakatime.com/badge/user/91c0db03-b05f-4786-b6b3-af5795e2f1df/project/37c4204d-3e81-4743-be1e-9025d49f392b)
 
 ## Công nghệ được sử dụng
 - Visual Studio 2022, SSMS 18
@@ -8,7 +9,7 @@
 - Guna.UI2.WinForms
 
 ## Hướng dẫn
-- Dùng SSMS run query SqlScripts/pure-script.sql
+- Dùng SSMS run query SqlScripts/generated-script.sql
 - Dùng Visual Studio mở SalesManagement/SalesManagement.sln
 - Thay đổi connection string trong App.config cho phù hợp
 - Register Guna Framework để edit form

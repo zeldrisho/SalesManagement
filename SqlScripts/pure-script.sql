@@ -121,6 +121,13 @@ WHERE ProductId = p.Id
 END
 GO
 
+CREATE PROC ReportBillInfo
+AS BEGIN
+SELECT ProductId, p.Name, b.Quantity, p.UnitPrice, Price FROM dbo.tblBillInfo b, dbo.tblProduct p
+WHERE ProductId = p.Id
+END
+GO
+
 CREATE PROC ListOfBills
 AS BEGIN
 SELECT b.Id, c.Name, DateOfPayment, TotalPrice FROM dbo.tblBill b, dbo.tblCustomer c
@@ -194,6 +201,10 @@ CREATE PROC InsertBillInfo
 @productId INT, @quantity INT, @unitPrice FLOAT  
 AS BEGIN
 DECLARE @price FLOAT = @quantity * @unitPrice
+UPDATE dbo.tblProduct
+SET Quantity = Quantity - @quantity
+WHERE Id = @productId
+
 INSERT INTO dbo.tblBillInfo VALUES
 (@productId, @quantity, @price)
 END
@@ -290,6 +301,15 @@ WHERE @email = Email
 END
 GO
 
+CREATE PROC UpdateEmployeeAddressPhoneNumber
+@address NVARCHAR(50), @phoneNumber NVARCHAR(50), @email NVARCHAR(50)
+AS BEGIN
+UPDATE dbo.tblEmployee
+SET Address = @address, PhoneNumber = @phoneNumber
+WHERE @email = Email
+END
+GO
+
 CREATE PROC UpdatePassword
 @email NVARCHAR(50), @password NVARCHAR(50)
 AS BEGIN
@@ -322,6 +342,13 @@ CREATE PROC GetEmployeeIdName
 @email NVARCHAR(50)
 AS BEGIN
 SELECT CONVERT(NVARCHAR(50), Id) + ' | ' + Name FROM dbo.tblEmployee WHERE Email = @email
+END
+GO
+
+CREATE PROC GetEmployeeAddressPhoneNumber
+@email NVARCHAR(50)
+AS BEGIN
+SELECT Address + ' | ' + PhoneNumber FROM dbo.tblEmployee WHERE Email = @email
 END
 GO
 

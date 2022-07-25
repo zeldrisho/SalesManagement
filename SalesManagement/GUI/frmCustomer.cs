@@ -14,19 +14,12 @@ namespace GUI
 {
     public partial class frmCustomer : Form
     {
-        private string email;
         BUS_Customer busCustomer = new BUS_Customer();
         DTO_Customer dtoCustomer;
 
         public frmCustomer()
         {
             InitializeComponent();
-        }
-
-        public frmCustomer(string email)
-        {
-            InitializeComponent();
-            this.email = email;
         }
 
         private void SetValue(bool param, bool isLoad)
@@ -60,6 +53,8 @@ namespace GUI
             {
                 item.DividerWidth = 1;
             }
+            gvCustomer.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvCustomer.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void MsgBox(string message, bool isError = false)

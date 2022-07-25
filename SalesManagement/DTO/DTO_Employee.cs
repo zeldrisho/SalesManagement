@@ -42,6 +42,13 @@ namespace DTO
             this.status = status;
         }
 
+        public DTO_Employee(string address, string phoneNumber, string email)
+        {
+            this.address = address;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
+        }
+
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Address { get => address; set => address = value; }

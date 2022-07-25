@@ -73,6 +73,11 @@ namespace BUS
             return dalEmployee.UpdateEmployee(employee);
         }
 
+        public bool UpdateEmployeeAddressPhoneNumber(DTO_Employee employee)
+        {
+            return dalEmployee.UpdateEmployeeAddressPhoneNumber(employee);
+        }
+
         public bool DeleteEmployee(int id)
         {
             return dalEmployee.DeleteEmployee(id);
@@ -86,6 +91,11 @@ namespace BUS
         public string GetEmployeeIdName(string email)
         {
             return dalEmployee.GetEmployeeIdName(email);
+        }
+
+        public string GetEmployeeAddressPhoneNumber(string email)
+        {
+            return dalEmployee.GetEmployeeAddressPhoneNumber(email);
         }
 
         public string GetRandomPassword()

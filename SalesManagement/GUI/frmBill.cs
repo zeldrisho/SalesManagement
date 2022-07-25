@@ -41,6 +41,9 @@ namespace GUI
             {
                 item.DividerWidth = 1;
             }
+            gvBill.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvBill.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            gvBill.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void txtSearchCustomer_TextChanged(object sender, EventArgs e)
