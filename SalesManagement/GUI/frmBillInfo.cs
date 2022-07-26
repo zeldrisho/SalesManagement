@@ -122,11 +122,11 @@ namespace GUI
             int id = busProduct.GetProductId(productName);
             str = cboProductNameQuantity.SelectedItem.ToString();
             strlist = str.Split(separator);
-            string quantity = strlist[1].Trim();
-            if (busBillInfo.UpdateProductInBillInfo(id, int.Parse(quantity)))
+            if (busBillInfo.UpdateProductInBillInfo(id, int.Parse(txtQuantity.Text)))
             {
                 gvBillInfo.DataSource = busBillInfo.ListBillInfo();
                 LoadGridView();
+                txtTotalPrice.Text = busBillInfo.GetTotalPrice().ToString();
                 MsgBox("Sửa sản phẩm thành công!");
             }
             else
@@ -150,6 +150,22 @@ namespace GUI
                 else
                     MsgBox("Không xóa được", true);
             }
+        }
+
+        private void gvBillInfo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //if (gvBillInfo.Rows.Count > 0)
+            //{
+            //    cbo = gvProduct.CurrentRow.Cells[0].Value.ToString();
+            //    txtName.Text = gvProduct.CurrentRow.Cells[1].Value.ToString();
+            //    txtQuantity.Text = gvProduct.CurrentRow.Cells[2].Value.ToString();
+            //    txtImportUnitPrice.Text = gvProduct.CurrentRow.Cells[3].Value.ToString();
+            //    txtUnitPrice.Text = gvProduct.CurrentRow.Cells[4].Value.ToString();
+
+            //    MemoryStream memoryStream = new MemoryStream((byte[])gvProduct.CurrentRow.Cells[5].Value);
+            //    pcbProduct.Image = Image.FromStream(memoryStream);
+            //    txtNote.Text = gvProduct.CurrentRow.Cells[6].Value.ToString();
+            //}
         }
 
         private void btnPay_Click(object sender, EventArgs e)

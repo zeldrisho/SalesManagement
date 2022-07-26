@@ -139,6 +139,9 @@
   <data name="icons8_shopify" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8_shopify.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_statistics_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8_statistics_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pulse_1s_200px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pulse-1s-200px.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

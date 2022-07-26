@@ -32,13 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnEmployee = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnStatistic = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAccount = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnBill = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnCustomer = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnProduct = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnEmployee = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -60,19 +61,78 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.guna2Panel1.Controls.Add(this.btnEmployee);
+            this.guna2Panel1.Controls.Add(this.btnStatistic);
             this.guna2Panel1.Controls.Add(this.guna2Separator1);
             this.guna2Panel1.Controls.Add(this.btnLogout);
             this.guna2Panel1.Controls.Add(this.btnAccount);
             this.guna2Panel1.Controls.Add(this.btnBill);
             this.guna2Panel1.Controls.Add(this.btnCustomer);
             this.guna2Panel1.Controls.Add(this.btnProduct);
-            this.guna2Panel1.Controls.Add(this.btnEmployee);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(200, 609);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.Animated = true;
+            this.btnEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmployee.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployee.CustomImages.Image = global::GUI.Properties.Resources.icons8_employee_32;
+            this.btnEmployee.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEmployee.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEmployee.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEmployee.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEmployee.FillColor = System.Drawing.Color.Empty;
+            this.btnEmployee.FillColor2 = System.Drawing.Color.Empty;
+            this.btnEmployee.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
+            this.btnEmployee.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnEmployee.Location = new System.Drawing.Point(3, 401);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(194, 45);
+            this.btnEmployee.TabIndex = 3;
+            this.btnEmployee.Text = "Nhân viên";
+            this.btnEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEmployee.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnEmployee.UseTransparentBackground = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
+            // 
+            // btnStatistic
+            // 
+            this.btnStatistic.Animated = true;
+            this.btnStatistic.BackColor = System.Drawing.Color.Transparent;
+            this.btnStatistic.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatistic.CustomImages.Image = global::GUI.Properties.Resources.icons8_statistics_32;
+            this.btnStatistic.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistic.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatistic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatistic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStatistic.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStatistic.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStatistic.FillColor = System.Drawing.Color.Empty;
+            this.btnStatistic.FillColor2 = System.Drawing.Color.Empty;
+            this.btnStatistic.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnStatistic.ForeColor = System.Drawing.Color.White;
+            this.btnStatistic.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
+            this.btnStatistic.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnStatistic.Location = new System.Drawing.Point(3, 146);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Size = new System.Drawing.Size(194, 45);
+            this.btnStatistic.TabIndex = 9;
+            this.btnStatistic.Text = "Thống kê";
+            this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistic.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnStatistic.UseTransparentBackground = true;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // guna2Separator1
             // 
@@ -227,35 +287,6 @@
             this.btnProduct.UseTransparentBackground = true;
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
-            // btnEmployee
-            // 
-            this.btnEmployee.Animated = true;
-            this.btnEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.btnEmployee.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmployee.CustomImages.Image = global::GUI.Properties.Resources.icons8_employee_32;
-            this.btnEmployee.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEmployee.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEmployee.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEmployee.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEmployee.FillColor = System.Drawing.Color.Empty;
-            this.btnEmployee.FillColor2 = System.Drawing.Color.Empty;
-            this.btnEmployee.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnEmployee.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
-            this.btnEmployee.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.btnEmployee.Location = new System.Drawing.Point(3, 146);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(194, 45);
-            this.btnEmployee.TabIndex = 3;
-            this.btnEmployee.Text = "Nhân viên";
-            this.btnEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEmployee.TextOffset = new System.Drawing.Point(50, 0);
-            this.btnEmployee.UseTransparentBackground = true;
-            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -388,5 +419,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnStatistic;
     }
 }

@@ -324,7 +324,7 @@
             this.txtNote.PlaceholderText = "";
             this.txtNote.SelectedText = "";
             this.txtNote.Size = new System.Drawing.Size(263, 36);
-            this.txtNote.TabIndex = 5;
+            this.txtNote.TabIndex = 4;
             // 
             // label6
             // 
@@ -415,7 +415,7 @@
             this.txtUnitPrice.PlaceholderText = "";
             this.txtUnitPrice.SelectedText = "";
             this.txtUnitPrice.Size = new System.Drawing.Size(123, 36);
-            this.txtUnitPrice.TabIndex = 4;
+            this.txtUnitPrice.TabIndex = 3;
             // 
             // label4
             // 
@@ -453,7 +453,7 @@
             this.txtImportUnitPrice.PlaceholderText = "";
             this.txtImportUnitPrice.SelectedText = "";
             this.txtImportUnitPrice.Size = new System.Drawing.Size(123, 36);
-            this.txtImportUnitPrice.TabIndex = 3;
+            this.txtImportUnitPrice.TabIndex = 2;
             // 
             // label3
             // 
@@ -491,7 +491,7 @@
             this.txtQuantity.PlaceholderText = "";
             this.txtQuantity.SelectedText = "";
             this.txtQuantity.Size = new System.Drawing.Size(95, 36);
-            this.txtQuantity.TabIndex = 2;
+            this.txtQuantity.TabIndex = 1;
             // 
             // label2
             // 
@@ -529,7 +529,7 @@
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(252, 36);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 0;
             // 
             // label1
             // 

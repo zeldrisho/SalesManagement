@@ -2,11 +2,10 @@
 [![wakatime](https://wakatime.com/badge/user/91c0db03-b05f-4786-b6b3-af5795e2f1df/project/37c4204d-3e81-4743-be1e-9025d49f392b.svg)](https://wakatime.com/badge/user/91c0db03-b05f-4786-b6b3-af5795e2f1df/project/37c4204d-3e81-4743-be1e-9025d49f392b)
 
 ## Công nghệ được sử dụng
-- Visual Studio 2022, SSMS 18
-- SQL Server 2019 Express
-- .NET Framework 4.7.2
-- ADO.NET
-- Guna.UI2.WinForms
+- Visual Studio 2022, SQL Server Management Studio 18 (SSMS)
+- Microsoft SQL Server 2019
+- .NET Framework 4.7.2, ADO.NET
+- Guna Framework
 
 ## Hướng dẫn
 - Dùng SSMS run query SqlScripts/generated-script.sql
@@ -29,3 +28,4 @@
 - https://www.youtube.com/c/KTeam
 - https://www.youtube.com/channel/UCljqNyim6NFh6ZWj1qXXpSg
 - https://www.youtube.com/channel/UClM1M6b1ij-Vm8lG4Q3l68w
+- https://github.com/sobatdata/GunaChartExamples

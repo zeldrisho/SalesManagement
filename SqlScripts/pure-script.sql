@@ -296,9 +296,10 @@ GO
 CREATE PROC UpdateProductInBillInfo
 @id int, @quantity int
 AS BEGIN
-UPDATE dbo.tblBillInfo
-SET Quantity = @quantity
-WHERE ProductId = @id
+UPDATE b
+SET b.Quantity = @quantity, Price = @quantity * p.UnitPrice
+FROM dbo.tblProduct p, dbo.tblBillInfo b
+WHERE ProductId = @id AND b.ProductId = p.Id
 END
 GO
 
@@ -385,3 +386,30 @@ AS BEGIN
 SELECT SUM(Price) from dbo.tblBillInfo
 END
 GO
+
+CREATE PROC GetRevenueInMay
+AS BEGIN
+SELECT SUM(TotalPrice) AS Revenue, Date = DATEADD(MONTH, DATEDIFF(MONTH, 0, DateOfPayment), 0)
+FROM    dbo.tblBill
+WHERE   DateOfPayment >= '2022-05-01' 
+AND     DateOfPayment <= '2022-05-31'
+GROUP BY DATEADD(MONTH, DATEDIFF(MONTH, 0, DateOfPayment), 0)
+END
+
+CREATE PROC GetRevenueInJune
+AS BEGIN
+SELECT SUM(TotalPrice) AS Revenue, Date = DATEADD(MONTH, DATEDIFF(MONTH, 0, DateOfPayment), 0)
+FROM    dbo.tblBill
+WHERE   DateOfPayment >= '2022-06-01' 
+AND     DateOfPayment <= '2022-06-30'
+GROUP BY DATEADD(MONTH, DATEDIFF(MONTH, 0, DateOfPayment), 0)
+END
+
+CREATE PROC GetRevenueInJuly
+AS BEGIN
+SELECT SUM(TotalPrice) AS Revenue, Date = DATEADD(MONTH, DATEDIFF(MONTH, 0, DateOfPayment), 0)
+FROM    dbo.tblBill
+WHERE   DateOfPayment >= '2022-07-01' 
+AND     DateOfPayment <= '2022-07-31'
+GROUP BY DATEADD(MONTH, DATEDIFF(MONTH, 0, DateOfPayment), 0)
+END

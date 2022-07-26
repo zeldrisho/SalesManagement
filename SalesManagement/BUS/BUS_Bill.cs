@@ -27,5 +27,20 @@ namespace BUS
         {
             return dalBill.SearchCustomerInBill(name);
         }
+
+        public double GetRevenueInMay()
+        {
+            return dalBill.GetRevenueInMay();
+        }
+
+        public double GetRevenueInJune()
+        {
+            return dalBill.GetRevenueInJune();
+        }
+
+        public double GetRevenueInJuly()
+        {
+            return dalBill.GetRevenueInJuly();
+        }
     }
 }

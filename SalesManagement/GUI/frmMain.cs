@@ -18,6 +18,7 @@ namespace GUI
         frmEmployee fEmployee = new frmEmployee();
         frmProduct fProduct = new frmProduct();
         frmCustomer fCustomer = new frmCustomer();
+        frmStatistic fStatistic = new frmStatistic();
         frmAccount fAccount;
         frmBill fBill;
 
@@ -27,6 +28,7 @@ namespace GUI
             if (!busEmployee.GetEmployeeRole(email))
             {
                 btnEmployee.Visible = false;
+                btnStatistic.Visible = false;
                 btnProduct.Checked = true;
                 fProduct.TopLevel = false;
                 fProduct.Dock = DockStyle.Fill;
@@ -35,11 +37,11 @@ namespace GUI
             }
             else
             {
-                btnEmployee.Checked = true;
-                fEmployee.TopLevel = false;
-                fEmployee.Dock = DockStyle.Fill;
-                pnlBody.Controls.Add(fEmployee);
-                fEmployee.Show();
+                btnStatistic.Checked = true;
+                fStatistic.TopLevel = false;
+                fStatistic.Dock = DockStyle.Fill;
+                pnlBody.Controls.Add(fStatistic);
+                fStatistic.Show();
             }
             fAccount = new frmAccount(email);
             fBill = new frmBill(email);
@@ -98,6 +100,15 @@ namespace GUI
             pnlBody.Controls.Add(fAccount);
             fAccount.Dock = DockStyle.Fill;
             fAccount.Show();
+        }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            pnlBody.Controls.Clear();
+            fStatistic.TopLevel = false;
+            pnlBody.Controls.Add(fStatistic);
+            fStatistic.Dock = DockStyle.Fill;
+            fStatistic.Show();
         }
     }
 }

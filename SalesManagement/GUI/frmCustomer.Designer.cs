@@ -244,7 +244,7 @@
             this.txtPhoneNumber.PlaceholderText = "";
             this.txtPhoneNumber.SelectedText = "";
             this.txtPhoneNumber.Size = new System.Drawing.Size(252, 36);
-            this.txtPhoneNumber.TabIndex = 3;
+            this.txtPhoneNumber.TabIndex = 2;
             // 
             // label4
             // 
@@ -282,7 +282,7 @@
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(252, 36);
-            this.txtAddress.TabIndex = 2;
+            this.txtAddress.TabIndex = 1;
             // 
             // label3
             // 
@@ -320,7 +320,7 @@
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(252, 36);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 0;
             // 
             // label1
             // 
