@@ -1,5 +1,6 @@
 # Phần mềm quản lý bán hàng
 [![wakatime](https://wakatime.com/badge/user/91c0db03-b05f-4786-b6b3-af5795e2f1df/project/37c4204d-3e81-4743-be1e-9025d49f392b.svg)](https://wakatime.com/badge/user/91c0db03-b05f-4786-b6b3-af5795e2f1df/project/37c4204d-3e81-4743-be1e-9025d49f392b)
+- Video demo: https://youtu.be/AR8BS0V46C0
 
 ## Công nghệ được sử dụng
 - Visual Studio 2022, SQL Server Management Studio 18 (SSMS)
