@@ -11,22 +11,26 @@ namespace BUS
     {
         DAL_Employee dalEmployee = new DAL_Employee();
 
-        private string Encrytion(string password)
+        private string Encrytion(string input)
         {
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            byte[] encrypt;
-            UTF8Encoding encode = new UTF8Encoding();
-            encrypt = md5.ComputeHash(encode.GetBytes(password));
-            StringBuilder builder = new StringBuilder();
-            foreach (var item in encrypt)
+            using (MD5 md5 = MD5.Create())
             {
-                builder.Append(item.ToString());
+                byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+                StringBuilder sb = new StringBuilder();
+
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("x2"));
+                }
+
+                return sb.ToString();
             }
-            return builder.ToString();
         }
 
         public bool Login(string email, string password)
         {
+            
             password = Encrytion(password);
             return dalEmployee.Login(email, password);
         }

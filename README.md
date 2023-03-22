@@ -3,17 +3,15 @@
 - Video demo: https://youtu.be/WvMB75BGDYQ
 
 ## Công nghệ được sử dụng
-- Visual Studio 2022, SQL Server Management Studio 18 (SSMS)
+- Visual Studio 2022, SQL Server Management Studio
 - Microsoft SQL Server 2019
 - .NET Framework 4.7.2, ADO.NET
 - Guna Framework
 
 ## Hướng dẫn
-- Dùng SSMS run query SqlScripts/generated-script.sql
-- Dùng Visual Studio mở SalesManagement/SalesManagement.sln
 - Thay đổi connection string trong App.config cho phù hợp
-- Register Guna Framework để edit form
-- Chức năng send mail: sửa tài khoản, mật khẩu ở SalesManagement/GUI/SendMail.cs
+- Fix lỗi Guna Framework: gỡ và cài đặt lại package Guna.UI2.WinForms & Guna.Charts.WinForms trong project GUI
+- Chức năng send mail: đổi tài khoản ở SalesManagement/GUI/SendMail.cs
 
 ## Tài khoản mặc định
 - Admin 
