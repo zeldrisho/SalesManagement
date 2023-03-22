@@ -65,10 +65,10 @@ jobs:
       run: cd $GITHUB_WORKSPACE
     
     - name: Restore NuGet Packages
-      run: nuget restore SalesManagement/SalesManagement.sln
+      run: nuget restore SalesManagement.sln
       
     - name: Build solution
-      run: msbuild SalesManagement/SalesManagement.sln /p:UseSharedCompilation=false /p:Platform="Any CPU" /p:Configuration="Release"
+      run: msbuild SalesManagement.sln /p:UseSharedCompilation=false /p:Platform="Any CPU" /p:Configuration="Release"
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
